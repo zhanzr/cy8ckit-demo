@@ -11,12 +11,25 @@
 */
 #include "project.h"
 
+#define HZ 1000
+
+volatile static uint32_t g_Ticks;
+//SysTick的ISR
+void SysTick_Handler(void)
+{
+  g_Ticks++;
+}
+
 int main(void)
 {
+    /* Configure SysTick */
+    SysTick_Config(SystemCoreClock/HZ);
+    
     __enable_irq(); /* Enable global interrupts. */
     /* Enable CM4.  CY_CORTEX_M4_APPL_ADDR must be updated if CM4 memory layout is changed. */
     Cy_SysEnableCM4(CY_CORTEX_M4_APPL_ADDR); 
 
+    printf("PSOC6 CM0+ @ %u Hz\n", SystemCoreClock);
     volatile uint32_t testClk_Cm0 = SystemCoreClock;
     for(;;)
     {

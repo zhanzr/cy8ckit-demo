@@ -10,5 +10,8 @@ There are no communication or synchronization between the two cores.
 
 No UDB are used.
 
+UART on Cortex M4 works now.
+
+SysTick on both cores work.
 
 Note: Please rename the folder name from the git project name to psoc6_led.cydsn to keep compatibility with PSOC Creator.
