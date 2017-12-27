@@ -22,6 +22,7 @@ int main(void)
     {
         /* Place your application code here. */
         Cy_GPIO_Inv(LED1_0_PORT, LED1_0_NUM); /* toggle the pin */
+        Cy_SysLib_Delay(1500/*msec*/);  
         Cy_GPIO_Inv(LED2_0_PORT, LED2_0_NUM); /* toggle the pin */        
         Cy_SysLib_Delay(1500/*msec*/);
     }

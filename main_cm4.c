@@ -21,10 +21,13 @@ int main(void)
     {
         /* Place your application code here. */
         Cy_GPIO_Inv(LED3_0_PORT, LED3_0_NUM); /* toggle the pin */
-        Cy_SysLib_Delay(500/*msec*/);
+        
         Cy_GPIO_Inv(LED4_0_PORT, LED4_0_NUM); /* toggle the pin */        
+        
+        Cy_GPIO_Inv(LED5_0_PORT, LED5_0_NUM); /* toggle the pin */       
+        
         Cy_SysLib_Delay(500/*msec*/);
-        Cy_GPIO_Inv(LED5_0_PORT, LED5_0_NUM); /* toggle the pin */                
+        Cy_SysLib_Delay(500/*msec*/);
         Cy_SysLib_Delay(500/*msec*/);
     }
 }
