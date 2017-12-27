@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="psoc6_led-000\psoc6_led\CM0p (Core 0)\Source Files\main_cm0p.c">
+<ExpandedNodeIds>
+<v>psoc6_led-000</v>
+<v>psoc6_led-000\psoc6_led</v>
+<v>psoc6_led-000\psoc6_led\TopDesign</v>
+<v>psoc6_led-000\psoc6_led\psoc6_led.cydwr</v>
+<v>psoc6_led-000\psoc6_led\psoc6_led.cydwr\Pins</v>
+<v>psoc6_led-000\psoc6_led\psoc6_led.cydwr\Analog</v>
+<v>psoc6_led-000\psoc6_led\psoc6_led.cydwr\DMA</v>
+<v>psoc6_led-000\psoc6_led\psoc6_led.cydwr\Clocks</v>
+<v>psoc6_led-000\psoc6_led\psoc6_led.cydwr\Interrupts</v>
+<v>psoc6_led-000\psoc6_led\psoc6_led.cydwr\System</v>
+<v>psoc6_led-000\psoc6_led\psoc6_led.cydwr\Directives</v>
+<v>psoc6_led-000\psoc6_led\CM0p (Core 0)</v>
+<v>psoc6_led-000\psoc6_led\CM0p (Core 0)\Header Files</v>
+<v>psoc6_led-000\psoc6_led\CM0p (Core 0)\Source Files</v>
+<v>psoc6_led-000\psoc6_led\CM0p (Core 0)\Source Files\main_cm0p.c</v>
+<v>psoc6_led-000\psoc6_led\CM0p (Core 0)\Source Files\startup_psoc63_cm0plus.S</v>
+<v>psoc6_led-000\psoc6_led\CM0p (Core 0)\Source Files\startup_psoc63_cm0plus.s</v>
+<v>psoc6_led-000\psoc6_led\CM0p (Core 0)\Source Files\system_psoc63_cm0plus.c</v>
+<v>psoc6_led-000\psoc6_led\CM0p (Core 0)\cy8c6xx7_cm0plus.icf</v>
+<v>psoc6_led-000\psoc6_led\CM0p (Core 0)\cy8c6xx7_cm0plus.ld</v>
+<v>psoc6_led-000\psoc6_led\CM0p (Core 0)\cy8c6xx7_cm0plus.scat</v>
+<v>psoc6_led-000\psoc6_led\CM4 (Core 1)</v>
+<v>psoc6_led-000\psoc6_led\CM4 (Core 1)\Header Files</v>
+<v>psoc6_led-000\psoc6_led\CM4 (Core 1)\Source Files</v>
+<v>psoc6_led-000\psoc6_led\CM4 (Core 1)\Source Files\main_cm4.c</v>
+<v>psoc6_led-000\psoc6_led\CM4 (Core 1)\Source Files\startup_psoc63_cm4.S</v>
+<v>psoc6_led-000\psoc6_led\CM4 (Core 1)\Source Files\startup_psoc63_cm4.s</v>
+<v>psoc6_led-000\psoc6_led\CM4 (Core 1)\Source Files\system_psoc63_cm4.c</v>
+<v>psoc6_led-000\psoc6_led\CM4 (Core 1)\cy8c6xx7_cm4_dual.icf</v>
+<v>psoc6_led-000\psoc6_led\CM4 (Core 1)\cy8c6xx7_cm4_dual.ld</v>
+<v>psoc6_led-000\psoc6_led\CM4 (Core 1)\cy8c6xx7_cm4_dual.scat</v>
+<v>psoc6_led-000\psoc6_led\Shared Files</v>
+<v>psoc6_led-000\psoc6_led\Shared Files\cy_ipc_config.c</v>
+<v>psoc6_led-000\psoc6_led\Shared Files\cy_ipc_config.h</v>
+<v>psoc6_led-000\psoc6_led\Shared Files\cyapicallbacks.h</v>
+<v>psoc6_led-000\psoc6_led\Shared Files\system_psoc63.h</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>psoc6_led-000</v>
+<v>psoc6_led-000\psoc6_led</v>
+<v>psoc6_led-000\psoc6_led\TopDesign</v>
+<v>psoc6_led-000\psoc6_led\psoc6_led.cydwr</v>
+<v>psoc6_led-000\psoc6_led\psoc6_led.cydwr\Pins</v>
+<v>psoc6_led-000\psoc6_led\psoc6_led.cydwr\Analog</v>
+<v>psoc6_led-000\psoc6_led\psoc6_led.cydwr\DMA</v>
+<v>psoc6_led-000\psoc6_led\psoc6_led.cydwr\Clocks</v>
+<v>psoc6_led-000\psoc6_led\psoc6_led.cydwr\Interrupts</v>
+<v>psoc6_led-000\psoc6_led\psoc6_led.cydwr\System</v>
+<v>psoc6_led-000\psoc6_led\psoc6_led.cydwr\Directives</v>
+<v>psoc6_led-000\psoc6_led\CM0p (Core 0)</v>
+<v>psoc6_led-000\psoc6_led\CM0p (Core 0)\Header Files</v>
+<v>psoc6_led-000\psoc6_led\CM0p (Core 0)\Source Files</v>
+<v>psoc6_led-000\psoc6_led\CM0p (Core 0)\Source Files\main_cm0p.c</v>
+<v>psoc6_led-000\psoc6_led\CM0p (Core 0)\Source Files\startup_psoc63_cm0plus.S</v>
+<v>psoc6_led-000\psoc6_led\CM0p (Core 0)\Source Files\startup_psoc63_cm0plus.s</v>
+<v>psoc6_led-000\psoc6_led\CM0p (Core 0)\Source Files\system_psoc63_cm0plus.c</v>
+<v>psoc6_led-000\psoc6_led\CM0p (Core 0)\cy8c6xx7_cm0plus.icf</v>
+<v>psoc6_led-000\psoc6_led\CM0p (Core 0)\cy8c6xx7_cm0plus.ld</v>
+<v>psoc6_led-000\psoc6_led\CM0p (Core 0)\cy8c6xx7_cm0plus.scat</v>
+<v>psoc6_led-000\psoc6_led\CM4 (Core 1)</v>
+<v>psoc6_led-000\psoc6_led\CM4 (Core 1)\Header Files</v>
+<v>psoc6_led-000\psoc6_led\CM4 (Core 1)\Source Files</v>
+<v>psoc6_led-000\psoc6_led\CM4 (Core 1)\Source Files\main_cm4.c</v>
+<v>psoc6_led-000\psoc6_led\CM4 (Core 1)\Source Files\startup_psoc63_cm4.S</v>
+<v>psoc6_led-000\psoc6_led\CM4 (Core 1)\Source Files\startup_psoc63_cm4.s</v>
+<v>psoc6_led-000\psoc6_led\CM4 (Core 1)\Source Files\system_psoc63_cm4.c</v>
+<v>psoc6_led-000\psoc6_led\CM4 (Core 1)\cy8c6xx7_cm4_dual.icf</v>
+<v>psoc6_led-000\psoc6_led\CM4 (Core 1)\cy8c6xx7_cm4_dual.ld</v>
+<v>psoc6_led-000\psoc6_led\CM4 (Core 1)\cy8c6xx7_cm4_dual.scat</v>
+<v>psoc6_led-000\psoc6_led\Shared Files</v>
+<v>psoc6_led-000\psoc6_led\Shared Files\cy_ipc_config.c</v>
+<v>psoc6_led-000\psoc6_led\Shared Files\cy_ipc_config.h</v>
+<v>psoc6_led-000\psoc6_led\Shared Files\cyapicallbacks.h</v>
+<v>psoc6_led-000\psoc6_led\Shared Files\system_psoc63.h</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\pdl</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\Pins and Interrupts</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cycodeshareexport.ld</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cycodeshareimport.ld</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cycodeshareimport.scat</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cydevice_trm.h</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cydevicegnu_trm.inc</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cydeviceiar_trm.inc</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cydevicerv_trm.inc</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cydisabledsheets.h</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cyfitter.h</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="psoc6_led-000\psoc6_led\TopDesign\TopDesign.cysch">
+<ExpandedNodeIds>
+<v>psoc6_led-000</v>
+<v>psoc6_led-000\psoc6_led</v>
+<v>psoc6_led-000\psoc6_led\TopDesign</v>
+<v>psoc6_led-000\psoc6_led\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>psoc6_led-000</v>
+<v>psoc6_led-000\psoc6_led</v>
+<v>psoc6_led-000\psoc6_led\TopDesign</v>
+<v>psoc6_led-000\psoc6_led\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>psoc6_led-000</v>
+<v>psoc6_led-000\psoc6_led</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_flash.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_gpio.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_config.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_drv.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_pipe.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_sema.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_lvd.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_profile.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_prot.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysanalog.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysclk.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysint.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syslib.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syslib_gcc.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syspm.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_systick.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_trigmux.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_wdt.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_sysint_cfg.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\main_cm0p.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\startup_psoc63_cm0plus.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\system_psoc63_cm0plus.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\psoc6_led.elf</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\psoc6_led.hex</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\psoc6_led.map</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_flash.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_gpio.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_ipc_config.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_ipc_drv.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_ipc_pipe.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_ipc_sema.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_lvd.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_profile.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_prot.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_sysanalog.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_sysclk.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_sysint.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_syslib.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_syslib_mdk.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_syspm.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_systick.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_trigmux.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_wdt.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cyfitter_sysint_cfg.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cymetadata.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\main_cm0p.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\startup_psoc63_cm0plus.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\system_psoc63_cm0plus.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\psoc6_led.elf</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\psoc6_led.hex</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\psoc6_led.map</v>
+<v>psoc6_led-000\psoc6_led\CortexM4</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_flash.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_gpio.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_config.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_drv.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_pipe.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_sema.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_lvd.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_profile.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_prot.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysanalog.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysclk.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysint.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syslib.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syslib_gcc.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syspm.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_systick.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_trigmux.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_wdt.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cyfitter_sysint_cfg.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\main_cm4.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\startup_psoc63_cm4.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\system_psoc63_cm4.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\psoc6_led.elf</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\psoc6_led.hex</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\psoc6_led.map</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\cy_flash.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\cy_gpio.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\cy_ipc_config.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\cy_ipc_drv.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\cy_ipc_pipe.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\cy_ipc_sema.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\cy_lvd.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\cy_profile.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\cy_prot.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\cy_sysanalog.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\cy_sysclk.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\cy_sysint.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\cy_syslib.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\cy_syslib_mdk.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\cy_syspm.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\cy_systick.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\cy_trigmux.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\cy_wdt.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\cyfitter_sysint_cfg.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\cymetadata.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\main_cm4.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\startup_psoc63_cm4.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\Listing Files\system_psoc63_cm4.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\psoc6_led.elf</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\psoc6_led.hex</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_MDK_Generic\Debug\psoc6_led.map</v>
+<v>psoc6_led-000\psoc6_led\psoc6_led.gpdsc</v>
+<v>psoc6_led-000\psoc6_led\psoc6_led.rpt</v>
+<v>psoc6_led-000\psoc6_led\psoc6_led_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>psoc6_led-000</v>
+<v>psoc6_led-000\psoc6_led</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_flash.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_gpio.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_config.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_drv.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_pipe.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_sema.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_lvd.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_profile.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_prot.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysanalog.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysclk.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysint.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syslib.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syslib_gcc.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syspm.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_systick.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_trigmux.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_wdt.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_sysint_cfg.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\main_cm0p.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\startup_psoc63_cm0plus.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\system_psoc63_cm0plus.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\psoc6_led.elf</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\psoc6_led.hex</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\psoc6_led.map</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_flash.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_gpio.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_ipc_config.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_ipc_drv.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_ipc_pipe.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_ipc_sema.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_lvd.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_profile.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_prot.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_sysanalog.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_sysclk.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_sysint.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_MDK_Generic\Debug\Listing Files\cy_syslib.lst</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="psoc6_led-000">
+<ExpandedNodeIds>
+<v>psoc6_led-000</v>
+<v>psoc6_led-000\psoc6_led</v>
+<v>psoc6_led-000\psoc6_led\PSoC 6 Architecture TRM</v>
+<v>psoc6_led-000\psoc6_led\Peripheral Driver Library</v>
+<v>psoc6_led-000\psoc6_led\System Reference Guides</v>
+<v>psoc6_led-000\psoc6_led\GPIO_PDL_v1_0</v>
+<v>psoc6_led-000\psoc6_led\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
+<v>psoc6_led-000\psoc6_led\LED_v1_0</v>
+<v>psoc6_led-000\psoc6_led\LED_v1_0\LED_v1_0.pdf</v>
+<v>psoc6_led-000\psoc6_led\Power_v1_0</v>
+<v>psoc6_led-000\psoc6_led\Power_v1_0\Power_v1_0.pdf</v>
+<v>psoc6_led-000\psoc6_led\Resistor_v1_0</v>
+<v>psoc6_led-000\psoc6_led\Resistor_v1_0\Resistor_v1_0.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>psoc6_led-000</v>
+<v>psoc6_led-000\psoc6_led</v>
+<v>psoc6_led-000\psoc6_led\PSoC 6 Architecture TRM</v>
+<v>psoc6_led-000\psoc6_led\Peripheral Driver Library</v>
+<v>psoc6_led-000\psoc6_led\System Reference Guides</v>
+<v>psoc6_led-000\psoc6_led\GPIO_PDL_v1_0</v>
+<v>psoc6_led-000\psoc6_led\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
+<v>psoc6_led-000\psoc6_led\LED_v1_0</v>
+<v>psoc6_led-000\psoc6_led\LED_v1_0\LED_v1_0.pdf</v>
+<v>psoc6_led-000\psoc6_led\Power_v1_0</v>
+<v>psoc6_led-000\psoc6_led\Power_v1_0\Power_v1_0.pdf</v>
+<v>psoc6_led-000\psoc6_led\Resistor_v1_0</v>
+<v>psoc6_led-000\psoc6_led\Resistor_v1_0\Resistor_v1_0.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs />
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>
