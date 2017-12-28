@@ -343,7 +343,6 @@
  *
  ***************************************************************************
  */
-
 /* Compiler and system dependent definitions: */
 
                 /* Use times(2) time function unless    */
@@ -441,3 +440,4 @@ void Proc_8 (Arr_1_Dim Arr_1_Par_Ref,
 Enumeration Func_1 (Capital_Letter Ch_1_Par_Val, Capital_Letter Ch_2_Par_Val);
 Boolean Func_2 (Str_30 Str_1_Par_Ref, Str_30 Str_2_Par_Ref);
 Boolean Func_3 (Enumeration Enum_Par_Val);
+
