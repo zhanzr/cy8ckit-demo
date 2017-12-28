@@ -5,7 +5,7 @@ Note: Please rename the folder name from the git project name to psoc6_led.cydsn
 PSOC6 CYC8C6347BZI-BLD53
 
 Both Cortex M0+ and Cortex M4 run @ 100MHz.
-ARMGCC 5.4.1, -Os, Newlib-Nano, Without float format printf. UART 115200 Retarget IO.
+ARMGCC 5.4.1, -O3, Newlib-Nano, Without float format printf. UART 115200 Retarget IO.
 
 Summary:
 CM0+:
@@ -17,6 +17,15 @@ Microseconds for one run through Dhrystone: 4.97
 Dhrystones per Second:                      201156.66
 
 According to the result, the CM4 get a 48% performance boost against CM0+.
+
+UPDATE:
+	After moving the common functions to the shared memory region, performance degrades.
+	Now:
+	[CM0+]uSeconds for one run through Dhrystone: 9.05
+	Dhrystones per Second:                      110451.47
+
+	[CM4]uSeconds for one run through Dhrystone: 6.63
+	Dhrystones per Second:                      150772.70
 
 =====================================================
 
