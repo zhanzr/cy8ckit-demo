@@ -58,6 +58,7 @@
 <v>psoc6_led-000\psoc6_led\Shared Files\dhry.h</v>
 <v>psoc6_led-000\psoc6_led\Shared Files\dhry_2.c</v>
 <v>psoc6_led-000\psoc6_led\Shared Files\system_psoc63.h</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source</v>
 <v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
@@ -100,6 +101,17 @@
 <v>psoc6_led-000\psoc6_led\Shared Files\dhry_2.c</v>
 <v>psoc6_led-000\psoc6_led\Shared Files\system_psoc63.h</v>
 <v>psoc6_led-000\psoc6_led\Generated_Source</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\pdl</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\Pins and Interrupts</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\UART_1</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\UART_1_SCBCLK</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cycodeshareexport.ld</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cycodeshareimport.ld</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cycodeshareimport.scat</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cydevice_trm.h</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cydevicegnu_trm.inc</v>
+<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cydeviceiar_trm.inc</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -381,7 +393,57 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\main_cm0p.c" />
+<name v=".\main_cm4.c" />
+<name v=".\system_psoc63.h" />
+<name v=".\system_psoc63_cm4.c" />
+<name v=".\Generated_Source\PSoC6\pdl\cmsis\include\core_cm0plus.h" />
+<name v=".\armgcc\startup\startup_psoc63_cm0plus.S" />
+<name v=".\system_psoc63_cm0plus.c" />
+<name v=".\psoc6_led.cydwr" />
+<name v=".\TopDesign\TopDesign.cysch" />
+<name v=".\Generated_Source\PSoC6\cyfitter_gpio.h" />
+<name v=".\Generated_Source\PSoC6\project.h" />
+<name v=".\Generated_Source\PSoC6\UART_1.h" />
+<name v=".\Generated_Source\PSoC6\cyfitter_sysint.h" />
+<name v=".\Generated_Source\PSoC6\pdl\drivers\peripheral\scb\cy_scb_uart.h" />
+<name v=".\Generated_Source\PSoC6\pdl\cmsis\include\core_cm4.h" />
+<name v=".\Generated_Source\PSoC6\cyfitter_cfg.h" />
+<name v=".\Generated_Source\PSoC6\cyfitter_cfg.c" />
+<name v=".\Generated_Source\PSoC6\pdl\drivers\peripheral\sysclk\cy_sysclk.h" />
+<name v=".\Generated_Source\PSoC6\pdl\devices\psoc6\psoc63\include\cy_device_headers.h" />
+<name v=".\Generated_Source\PSoC6\pdl\devices\psoc6\psoc63\include\cy8c6347bzi_bld53.h" />
+<name v=".\Generated_Source\PSoC6\pdl\devices\psoc6\psoc63\include\gpio_psoc63_116_bga_ble.h" />
+<name v=".\Generated_Source\PSoC6\pdl\devices\psoc6\psoc63\include\psoc63_config.h" />
+<name v=".\Generated_Source\PSoC6\pdl\drivers\peripheral\syslib\gcc\cy_syslib_gcc.S" />
+<name v=".\Generated_Source\PSoC6\pdl\drivers\peripheral\syslib\cy_syslib.c" />
+<name v=".\Generated_Source\PSoC6\pdl\drivers\peripheral\syslib\cy_syslib.h" />
+<name v=".\armgcc\startup\startup_psoc63_cm4.S" />
+<name v=".\CE216795_DualCoreSharedMemory01.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\CE216795_DualCoreSharedMemory01.cydsn\main_cm0p.c" />
+<name v=".\CE216795_DualCoreSharedMemory01.cydsn\ce216795_common.h" />
+<name v=".\CE216795_DualCoreSharedMemory01.cydsn\main_cm4.c" />
+<name v=".\CE216795_DualCoreSharedMemory01.cydsn\cyapicallbacks.h" />
+<name v=".\CE216795_DualCoreSharedMemory01.cydsn\ce216795_common.c" />
+<name v=".\cy_ipc_config.h" />
+<name v=".\cy_ipc_config.c" />
+<name v=".\dhry.h" />
+<name v=".\dhry_2.c" />
+<name v=".\CE216795_DualCoreSharedMemory01.cydsn\Generated_Source\PSoC6\pdl\drivers\peripheral\ipc\cy_ipc_sema.h" />
+<name v=".\CE216795_DualCoreSharedMemory01.cydsn\Generated_Source\PSoC6\project.h" />
+<name v=".\Generated_Source\PSoC6\pdl\drivers\peripheral\ipc\cy_ipc_sema.h" />
+<name v=".\CE216795_DualCoreSharedMemory01.cydsn\CE216795_DualCoreSharedMemory01.cydwr" />
+<name v=".\ipc_user.h" />
+<name v=".\ipc_user.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1223, 717" SelectedTabbedMdiWindow="af1df071-a003-4542-aea2-5f0c005e7e78"><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\main_cm0p.c" Guid="4eb9baa7-a0c1-4dde-b80a-b0cb974beb31" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\main_cm4.c" Guid="af1df071-a003-4542-aea2-5f0c005e7e78" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\system_psoc63.h" Guid="661ffcec-f057-4963-b1ab-955428339998" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\system_psoc63_cm4.c" Guid="82cfc712-0a2b-4501-8127-24a2c6a7b821" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\Generated_Source\PSoC6\pdl\cmsis\include\core_cm0plus.h" Guid="12e5e3c5-608c-42f8-94e5-b49e51a66546" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\armgcc\startup\startup_psoc63_cm0plus.S" Guid="f129a13c-f5c4-477f-a429-11f0f1ca4b83" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\system_psoc63_cm0plus.c" Guid="f6b64aa7-f4e9-4318-a0ad-496bb6888778" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\psoc6_led.cydwr" Guid="b3db69f7-2699-4c45-a093-e9a5debd09dc" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\TopDesign\TopDesign.cysch" Guid="5919b787-2a23-403f-aa4d-383264f76bec" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\Generated_Source\PSoC6\cyfitter_gpio.h" Guid="0768423e-c909-41c5-bbb4-b5c74aec981e" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\Generated_Source\PSoC6\project.h" Guid="dfbe8831-610e-427e-a53f-779e2e09f91a" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\Generated_Source\PSoC6\UART_1.h" Guid="21fc6563-c65b-4c14-b43f-2d2dc41c1e14" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\Generated_Source\PSoC6\cyfitter_sysint.h" Guid="da5ab239-30a9-4602-b75f-ad96923014ad" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\Generated_Source\PSoC6\pdl\drivers\peripheral\scb\cy_scb_uart.h" Guid="57dde985-8725-488a-ae49-d5d071ce0d54" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\Generated_Source\PSoC6\pdl\cmsis\include\core_cm4.h" Guid="4f102d87-0a44-434c-9b66-ba5b713623d1" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\Generated_Source\PSoC6\cyfitter_cfg.h" Guid="35aa5378-6e87-44e0-bd1f-0b14e0190c1c" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\Generated_Source\PSoC6\cyfitter_cfg.c" Guid="5a6ca536-aceb-47af-a350-3e59b2520730" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\Generated_Source\PSoC6\pdl\drivers\peripheral\sysclk\cy_sysclk.h" Guid="ca548477-9857-4093-b2bc-02b69fff7bd6" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\Generated_Source\PSoC6\pdl\devices\psoc6\psoc63\include\cy_device_headers.h" Guid="4bf99c3a-62f8-4a6e-b5d4-e5332359ee67" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\Generated_Source\PSoC6\pdl\devices\psoc6\psoc63\include\cy8c6347bzi_bld53.h" Guid="6dac01f1-a2d5-47d7-9a34-7adb35976a61" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\Generated_Source\PSoC6\pdl\devices\psoc6\psoc63\include\gpio_psoc63_116_bga_ble.h" Guid="cb890a1a-acd7-4ae2-9387-77168d2888fc" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\Generated_Source\PSoC6\pdl\devices\psoc6\psoc63\include\psoc63_config.h" Guid="4cd388b4-eff3-4a7e-989e-4bedabf80e6e" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\Generated_Source\PSoC6\pdl\drivers\peripheral\syslib\gcc\cy_syslib_gcc.S" Guid="3c45f342-6f5e-4d5c-93d9-47625554a467" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\Generated_Source\PSoC6\pdl\drivers\peripheral\syslib\cy_syslib.c" Guid="5ee40c5f-bcb3-42db-b19c-ff3c865200c2" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="beb025a1-b4be-41fc-b334-4c6c55ff60d8" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\Generated_Source\PSoC6\pdl\drivers\peripheral\syslib\cy_syslib.h" Guid="f589ecfb-bb2c-424a-863a-fd52709f4cc2" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\armgcc\startup\startup_psoc63_cm4.S" Guid="3f3fc5a7-569d-4cca-8549-ee413e0914d4" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\CE216795_DualCoreSharedMemory01.cydsn\TopDesign\TopDesign.cysch" Guid="6a21415f-2bb8-46ab-855b-67d11cfb566e" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\CE216795_DualCoreSharedMemory01.cydsn\main_cm0p.c" Guid="2805d7d9-95f1-4ecd-aba8-1271825a3076" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\CE216795_DualCoreSharedMemory01.cydsn\ce216795_common.h" Guid="12077d74-c457-411d-a2f7-8784b7abe513" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\CE216795_DualCoreSharedMemory01.cydsn\main_cm4.c" Guid="d0f34784-841f-4767-bb5f-d18d5171a257" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\CE216795_DualCoreSharedMemory01.cydsn\cyapicallbacks.h" Guid="6bc3e492-7b51-4cdf-a292-54a3dd335040" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\CE216795_DualCoreSharedMemory01.cydsn\ce216795_common.c" Guid="376bf672-adcf-4fb3-bc75-cda2e1d88caa" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\cy_ipc_config.h" Guid="858562f1-4022-4b77-be51-ed9529ea403c" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\cy_ipc_config.c" Guid="93c02472-0738-4540-918f-a0f486d92921" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\dhry.h" Guid="331f624d-cc68-43a2-bf9d-afd27cc025cf" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\dhry_2.c" Guid="14164a2d-80ec-44d2-bec6-96df8df88036" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\CE216795_DualCoreSharedMemory01.cydsn\Generated_Source\PSoC6\pdl\drivers\peripheral\ipc\cy_ipc_sema.h" Guid="be99d39e-4300-41c2-8625-36fcaca57ffb" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\CE216795_DualCoreSharedMemory01.cydsn\Generated_Source\PSoC6\project.h" Guid="74a8c126-bf64-45dc-9d6b-ffee5c579d16" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\Generated_Source\PSoC6\pdl\drivers\peripheral\ipc\cy_ipc_sema.h" Guid="e72be95a-41f5-4996-adb6-bdb0b7869792" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\CE216795_DualCoreSharedMemory01.cydsn\CE216795_DualCoreSharedMemory01.cydwr" Guid="4f5c5e87-0230-41e5-a15b-639a0b79d9f3" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\ipc_user.h" Guid="b9539535-ce03-4d76-ab09-3d8ff06f3d51" /><DocumentWindow Key="C:\psoc6_prj\psoc6_led.cydsn\ipc_user.c" Guid="0a1290d9-9233-4bc6-b854-1ba72a04ea98" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
