@@ -1,18 +1,5 @@
 #include "ipc_user.h"
 
-/* timeout period, in microseconds */
-#define MY_TIMEOUT 1000ul
-
-///* debug pin usage */
-//#if (CY_CPU_CORTEX_M0P)  /* core is Cortex-M0+ */
-//  #define  PIN_READING  Pin_CM0p_Reading_0_PORT, Pin_CM0p_Reading_0_NUM
-//  #define  PIN_WRITING  Pin_CM0p_Writing_0_PORT, Pin_CM0p_Writing_0_NUM
-//#else /* core is Cortex-M4 */
-//  #define  PIN_READING  Pin_CM4_Reading_0_PORT, Pin_CM4_Reading_0_NUM
-//  #define  PIN_WRITING  Pin_CM4_Writing_0_PORT, Pin_CM4_Writing_0_NUM
-//#endif
-
-
 /*******************************************************************************
 * Function Name: IsSemaError
 ****************************************************************************//**
@@ -49,7 +36,6 @@ uint32_t ReadSharedVar(const uint8_t *sharedVar, uint8_t *copy)
     uint32_t timeout;
     uint32_t rtnVal;
 
-//    Cy_GPIO_Set(PIN_READING);
     /* timeout wait to set the semaphore */
     for (timeout = 0ul; timeout < MY_TIMEOUT; timeout++)
     {
@@ -139,4 +125,88 @@ uint32_t WriteSharedVar(uint8_t *sharedVar, uint8_t value)
     return (rtnVal);
 }
 
+int _write(int fd, const void *buffer, size_t count)
+{
+	uint32_t tmpCnt = count;
+
+    Cy_SCB_UART_PutArrayBlocking(UART_1_HW, buffer, count);
+    
+	return tmpCnt;
+}
+
+void non_ipc_output(uint32_t cpuid, uint32_t ticks)
+{
+    printf("%08X val:%u\n", 
+    cpuid,
+    ticks);    
+}
+
+void ipc_output(uint32_t cpuid, uint32_t ticks)
+{
+     uint32_t timeout;
+     uint32_t rtnVal;
+
+    //    Cy_GPIO_Set(PIN_WRITING);
+        /* timeout wait to set semaphore */
+    for (timeout = 0ul; timeout < MY_TIMEOUT; timeout++)
+    {
+        rtnVal = (uint32_t)Cy_IPC_Sema_Set(MY_SEMANUM, false);
+        /* exit the timeout wait if semaphore successfully set or error */
+        if ((rtnVal == (uint32_t)CY_IPC_SEMA_SUCCESS) || IsSemaError(rtnVal))
+        {
+            break;
+        }
+        CyDelayUs(1);
+    }
+    if (timeout >= MY_TIMEOUT)
+    {
+        //Timeout
+    }
+    
+    if (rtnVal == CY_IPC_SEMA_SUCCESS)
+    {
+        printf("%08X val:%u\n", 
+        cpuid,
+        ticks);    
+
+        /* timeout wait to clear semaphore */
+        for (timeout = 0ul; timeout < MY_TIMEOUT; timeout++)
+        {
+            rtnVal = (uint32_t)Cy_IPC_Sema_Clear(MY_SEMANUM, false);
+            /* exit the timeout wait if semaphore successfully cleared or error */
+            if ((rtnVal == (uint32_t)CY_IPC_SEMA_SUCCESS) || IsSemaError(rtnVal))
+            {
+                break;
+            }
+            CyDelayUs(1);
+        }
+        
+        if (timeout >= MY_TIMEOUT)
+        {
+            //Timeout
+        }
+    }  
+}
+
+/***************************************************************************//**
+* Function Name: handle_error
+********************************************************************************
+*
+* This function processes unrecoverable errors such as any component 
+* initialization errors etc. In case of such error the system will switch on 
+* ERROR_RED_LED and stay in the infinite loop of this function.
+*
+*******************************************************************************/
+void handle_error(void)
+{   
+     /* Disable all interrupts */
+    __disable_irq();
+    
+    /* Switch on error LED */ 
+   printf("PSOC6 IPC Error CPUID:%08X @ %u Hz\r\n",
+        SCB->CPUID,
+        SystemCoreClock);
+
+    while(1u) {}
+}
 /* [] END OF FILE */

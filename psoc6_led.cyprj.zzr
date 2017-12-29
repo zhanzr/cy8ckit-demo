@@ -3272,12 +3272,6 @@
 </dependency_info>
 <dependency_info name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0p" xml_contents_version="2">
 <CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1">
-<file name=".\CortexM0p\ARM_GCC_541\Release\dhry_2.o">
-<dep name=".\dhry.h" />
-<dep name=".\dhry_2.c" />
-</file>
-<file name=".\dhry.h" />
-<file name=".\dhry_2.c" />
 <file name=".\CortexM0p\ARM_GCC_541\Release\ipc_user.o">
 <dep name=".\Generated_Source\PSoC6\UART_1.h" />
 <dep name=".\Generated_Source\PSoC6\UART_1_SCBCLK.h" />
@@ -3512,12 +3506,17 @@
 <dep name=".\Generated_Source\PSoC6\pdl\middleware\ble\cy_ble_clk.h" />
 <dep name=".\Generated_Source\PSoC6\project.h" />
 <dep name=".\cy_ipc_config.h" />
-<dep name=".\dhry.h" />
 <dep name=".\ipc_user.h" />
 <dep name=".\main_cm0p.c" />
 <dep name=".\system_psoc63.h" />
 </file>
 <file name=".\main_cm0p.c" />
+<file name=".\dhry.h" />
+<file name=".\CortexM0p\ARM_GCC_541\Release\dhry_2.o">
+<dep name=".\dhry.h" />
+<dep name=".\dhry_2.c" />
+</file>
+<file name=".\dhry_2.c" />
 <file name=".\CortexM0p\ARM_GCC_541\Release\cyfitter_cfg.o">
 <dep name=".\Generated_Source\PSoC6\pdl\cmsis\include\cmsis_armcc.h" />
 <dep name=".\Generated_Source\PSoC6\pdl\cmsis\include\cmsis_armclang.h" />
@@ -5016,12 +5015,6 @@
 </dependency_info>
 <dependency_info name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM4" xml_contents_version="2">
 <CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1">
-<file name=".\CortexM4\ARM_GCC_541\Release\dhry_2.o">
-<dep name=".\dhry.h" />
-<dep name=".\dhry_2.c" />
-</file>
-<file name=".\dhry.h" />
-<file name=".\dhry_2.c" />
 <file name=".\CortexM4\ARM_GCC_541\Release\ipc_user.o">
 <dep name=".\Generated_Source\PSoC6\UART_1.h" />
 <dep name=".\Generated_Source\PSoC6\UART_1_SCBCLK.h" />
@@ -5256,12 +5249,17 @@
 <dep name=".\Generated_Source\PSoC6\pdl\middleware\ble\cy_ble_clk.h" />
 <dep name=".\Generated_Source\PSoC6\project.h" />
 <dep name=".\cy_ipc_config.h" />
-<dep name=".\dhry.h" />
 <dep name=".\ipc_user.h" />
 <dep name=".\main_cm4.c" />
 <dep name=".\system_psoc63.h" />
 </file>
 <file name=".\main_cm4.c" />
+<file name=".\dhry.h" />
+<file name=".\CortexM4\ARM_GCC_541\Release\dhry_2.o">
+<dep name=".\dhry.h" />
+<dep name=".\dhry_2.c" />
+</file>
+<file name=".\dhry_2.c" />
 <file name=".\CortexM4\ARM_GCC_541\Release\startup_psoc63_cm4.o">
 <dep name=".\armgcc\startup\startup_psoc63_cm4.S" />
 </file>
@@ -6789,7 +6787,6 @@
 <dep name=".\CortexM0p\ARM_GCC_541\Release\startup_psoc63_cm0plus.o" />
 <dep name=".\CortexM0p\ARM_GCC_541\Release\system_psoc63_cm0plus.o" />
 <dep name=".\CortexM0p\ARM_GCC_541\Release\cy_ipc_config.o" />
-<dep name=".\CortexM0p\ARM_GCC_541\Release\dhry_2.o" />
 <dep name=".\CortexM0p\ARM_GCC_541\Release\ipc_user.o" />
 <dep name=".\CortexM0p\ARM_GCC_541\Release\cyfitter_sysint_cfg.o" />
 <dep name=".\CortexM0p\ARM_GCC_541\Release\cyfitter_cfg.o" />
@@ -6829,7 +6826,6 @@
 <dep name=".\CortexM4\ARM_GCC_541\Release\startup_psoc63_cm4.o" />
 <dep name=".\CortexM4\ARM_GCC_541\Release\system_psoc63_cm4.o" />
 <dep name=".\CortexM4\ARM_GCC_541\Release\cy_ipc_config.o" />
-<dep name=".\CortexM4\ARM_GCC_541\Release\dhry_2.o" />
 <dep name=".\CortexM4\ARM_GCC_541\Release\ipc_user.o" />
 <dep name=".\CortexM4\ARM_GCC_541\Release\cyfitter_sysint_cfg.o" />
 <dep name=".\CortexM4\ARM_GCC_541\Release\cymetadata.o" />
@@ -7214,9 +7210,9 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 </warp_dep>
-<deps_time v="131589323335479426" />
+<deps_time v="131590055173835230" />
 <top_block v="TopDesign" />
-<last_generation v="4" />
+<last_generation v="8" />
 <pdl_path v="C:\Program Files (x86)\Cypress\PDL\3.0.1\" />
 <sw_packages />
 </CyGuid_925cc1e1-309e-4e08-b0a1-09a83c35b157>
@@ -7226,8 +7222,8 @@
 <link_deps_times>
 <name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0p" v="131589235085919512" />
 <name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM4" v="131589172028318149" />
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0p" v="131589338993670921" />
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM4" v="131589339008400085" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0p" v="131590108068511768" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM4" v="131590108083952834" />
 </link_deps_times>
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>
