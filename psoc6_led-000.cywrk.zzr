@@ -18,7 +18,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="psoc6_led-000\psoc6_led\CM4 (Core 1)\Source Files\main_cm4.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="psoc6_led-000\psoc6_led">
 <ExpandedNodeIds>
 <v>psoc6_led-000</v>
 <v>psoc6_led-000\CE216795_DualCoreSharedMemory01\TopDesign</v>
@@ -98,6 +98,12 @@
 <v>psoc6_led-000\CE216795.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
+<v>psoc6_led-000</v>
+<v>psoc6_led-000\CE216795_DualCoreSharedMemory01</v>
+<v>psoc6_led-000\psoc6_led</v>
+<v>psoc6_led-000\psoc6_led\TopDesign</v>
+<v>psoc6_led-000\psoc6_led\psoc6_led.cydwr</v>
+<v>psoc6_led-000\psoc6_led\psoc6_led.cydwr\Pins</v>
 <v>psoc6_led-000\psoc6_led\psoc6_led.cydwr\Analog</v>
 <v>psoc6_led-000\psoc6_led\psoc6_led.cydwr\DMA</v>
 <v>psoc6_led-000\psoc6_led\psoc6_led.cydwr\Clocks</v>
@@ -141,12 +147,6 @@
 <v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cycodeshareimport.ld</v>
 <v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cycodeshareimport.scat</v>
 <v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cydevice_trm.h</v>
-<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cydevicegnu_trm.inc</v>
-<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cydeviceiar_trm.inc</v>
-<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cydevicerv_trm.inc</v>
-<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cydisabledsheets.h</v>
-<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cyfitter.h</v>
-<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cyfitter_cfg.c</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
