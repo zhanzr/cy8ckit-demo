@@ -18,7 +18,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="psoc6_led-000\psoc6_led">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="psoc6_led-000\psoc6_led\CM0p (Core 0)\Source Files\main_cm0p.c">
 <ExpandedNodeIds>
 <v>psoc6_led-000</v>
 <v>psoc6_led-000\CE216795_DualCoreSharedMemory01\TopDesign</v>

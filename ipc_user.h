@@ -25,6 +25,10 @@
 /* timeout period, in microseconds */
 #define MY_TIMEOUT 1000ul
     
+#define LOOP_NUM    5000
+//#define DOUBLE  float
+#define DOUBLE  double
+
 /* function prototypes */
 uint32_t ReadSharedVar(const uint8_t *sharedVar, uint8_t *copy);
 uint32_t WriteSharedVar(uint8_t *sharedVar, uint8_t value);
