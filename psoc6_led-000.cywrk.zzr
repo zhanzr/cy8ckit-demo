@@ -18,7 +18,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="psoc6_led-000\psoc6_led">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="psoc6_led-000\psoc6_led\CM4 (Core 1)\Source Files\main_cm4.c">
 <ExpandedNodeIds>
 <v>psoc6_led-000</v>
 <v>psoc6_led-000\psoc6_led</v>
@@ -58,7 +58,6 @@
 <v>psoc6_led-000\psoc6_led\Shared Files\dhry.h</v>
 <v>psoc6_led-000\psoc6_led\Shared Files\dhry_2.c</v>
 <v>psoc6_led-000\psoc6_led\Shared Files\system_psoc63.h</v>
-<v>psoc6_led-000\psoc6_led\Generated_Source</v>
 <v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
@@ -101,17 +100,6 @@
 <v>psoc6_led-000\psoc6_led\Shared Files\dhry_2.c</v>
 <v>psoc6_led-000\psoc6_led\Shared Files\system_psoc63.h</v>
 <v>psoc6_led-000\psoc6_led\Generated_Source</v>
-<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6</v>
-<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\pdl</v>
-<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\Pins and Interrupts</v>
-<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\UART_1</v>
-<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\UART_1_SCBCLK</v>
-<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cycodeshareexport.ld</v>
-<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cycodeshareimport.ld</v>
-<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cycodeshareimport.scat</v>
-<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cydevice_trm.h</v>
-<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cydevicegnu_trm.inc</v>
-<v>psoc6_led-000\psoc6_led\Generated_Source\PSoC6\cydeviceiar_trm.inc</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -137,6 +125,7 @@
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_efuse.lst</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_flash.lst</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_gpio.lst</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_config.lst</v>
@@ -174,6 +163,7 @@
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Release</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Release\Listing Files</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_clk.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_efuse.lst</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_flash.lst</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_gpio.lst</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ipc_config.lst</v>
@@ -213,6 +203,7 @@
 <v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug</v>
 <v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files</v>
 <v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_efuse.lst</v>
 <v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_flash.lst</v>
 <v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_gpio.lst</v>
 <v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_config.lst</v>
@@ -249,6 +240,7 @@
 <v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Release</v>
 <v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Release\Listing Files</v>
 <v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_clk.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Release\Listing Files\cy_efuse.lst</v>
 <v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Release\Listing Files\cy_flash.lst</v>
 <v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Release\Listing Files\cy_gpio.lst</v>
 <v>psoc6_led-000\psoc6_led\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ipc_config.lst</v>
@@ -294,6 +286,7 @@
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_efuse.lst</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_flash.lst</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_gpio.lst</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_config.lst</v>
@@ -331,14 +324,13 @@
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Release</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Release\Listing Files</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_clk.lst</v>
+<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_efuse.lst</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_flash.lst</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_gpio.lst</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ipc_config.lst</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ipc_drv.lst</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ipc_pipe.lst</v>
 <v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ipc_sema.lst</v>
-<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_lvd.lst</v>
-<v>psoc6_led-000\psoc6_led\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_profile.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -351,6 +343,7 @@
 <v>psoc6_led-000</v>
 <v>psoc6_led-000\psoc6_led</v>
 <v>psoc6_led-000\psoc6_led\PSoC 6 Architecture TRM</v>
+<v>psoc6_led-000\psoc6_led\PSoC 63 Family Datasheet</v>
 <v>psoc6_led-000\psoc6_led\Peripheral Driver Library</v>
 <v>psoc6_led-000\psoc6_led\System Reference Guides</v>
 <v>psoc6_led-000\psoc6_led\GPIO_PDL_v1_0</v>
@@ -367,6 +360,7 @@
 <v>psoc6_led-000</v>
 <v>psoc6_led-000\psoc6_led</v>
 <v>psoc6_led-000\psoc6_led\PSoC 6 Architecture TRM</v>
+<v>psoc6_led-000\psoc6_led\PSoC 63 Family Datasheet</v>
 <v>psoc6_led-000\psoc6_led\Peripheral Driver Library</v>
 <v>psoc6_led-000\psoc6_led\System Reference Guides</v>
 <v>psoc6_led-000\psoc6_led\GPIO_PDL_v1_0</v>

@@ -43,7 +43,7 @@
 #ifdef __STACK_SIZE
     .equ    Stack_Size, __STACK_SIZE
 #else
-    .equ    Stack_Size, 0x00002000
+    .equ    Stack_Size, 0x00001000
 #endif
     .globl    __StackTop
     .globl    __StackLimit
@@ -58,7 +58,7 @@ __StackTop:
 #ifdef __HEAP_SIZE
     .equ    Heap_Size, __HEAP_SIZE
 #else
-    .equ    Heap_Size, 0x00000200
+    .equ    Heap_Size, 0x00000400
 #endif
     .globl    __HeapBase
     .globl    __HeapLimit
