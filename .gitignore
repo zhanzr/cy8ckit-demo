@@ -1,3 +1,10 @@
+# MTB/ModusToolbox shared libs and build artifacts
+app/mtb_shared/
+**/build/
+build/
+.ninja_log
+.mtbqueryapi
+
 # Build outputs
 **/build/
 build/
