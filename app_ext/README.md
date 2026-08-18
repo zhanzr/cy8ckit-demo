@@ -76,5 +76,5 @@ probe-rs download build/cm4_dhry_150m.elf \
 - The ROM does **not** auto-boot the CM0+ on this board (boot-ROM hold), so
   the stub must be booted manually even with no debugger attached (confirmed
   by a SWD-disconnected power-cycle test).
-- The probe-rs external-NOR write currently takes ~90-105 s for a ~40 KB
-  image (single-SPI 4 MHz algorithm); optimization is a follow-up.
+- The probe-rs external-NOR write takes **~2 s** for a ~40 KB image after
+  the SMIF-algorithm speed fix (see tools/psoc6_smif_algo/README.md).

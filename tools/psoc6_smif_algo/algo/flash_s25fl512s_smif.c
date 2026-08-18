@@ -120,18 +120,14 @@ static void smif_rx_count(unsigned long n)
     DBG("[ALGO] RXN %lu\r\n", n);
 }
 
-/* Wait until the SMIF finishes the current transfer (STATUS.BUSY = 0). */
+/* The SMIF V1 STATUS.BUSY bit stays set after transfers complete, so it is
+ * NOT a completion indicator. Transfers are synchronized by the FIFOs
+ * (command FIFO ordering + TX/RX data FIFO level waits) and by the flash WIP
+ * polling in the erase/program paths - so there is deliberately nothing to
+ * wait on here. (Removing this fixed a ~2.5 s per-transfer stall that made
+ * probe-rs writes take ~100 s for a 40 KB image.) */
 static void smif_wait_idle(void)
 {
-    unsigned long d;
-    for (d = 0; d < 2000000u; d++)
-    {
-        if (!(*(vu32 *)SMIF0_STATUS & 0x80000000UL))
-        {
-            return;
-        }
-    }
-    DBG("[ALGO] NOT IDLE! STATUS=0x%08lX\r\n", *(vu32 *)SMIF0_STATUS);
 }
 
 /* Push payload bytes to the TX data FIFO (8-byte FIFO, drain as we go). */

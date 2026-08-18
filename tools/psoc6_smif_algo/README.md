@@ -84,6 +84,22 @@ Commands (single-SPI, 4-byte addressing, no QE dependency):
 The debug harness (`probers_alg`-style, after the h723-mini tool) is what
 located the two root causes: the SS0 HSIOM bug and the missing SMIF clock.
 
+### Write-speed fix (measured on hardware)
+
+An initial `probe-rs` write of a ~40 KB image took **~96-105 s**. Two fixes
+brought it to **~1.9 s**:
+
+1. **Removed the SMIF BUSY busy-wait.** The SMIF V1 `STATUS.BUSY` bit stays
+   set after a transfer completes, so `smif_wait_idle()` always burned its
+   full 2 M-iteration timeout (~2.5 s at the 4 MHz reset clock) on *every*
+   transfer - including every WIP status poll. Transfers are synchronized by
+   the FIFO ordering, the TX/RX data-FIFO level waits, and the flash WIP
+   polling, so there is nothing to wait on.
+2. **Raised `page_size` to `0x1000`** (the h723-mini algorithm's default; its
+   generated YAML used `0x4000`), reducing the number of probe-rs
+   `ProgramPage` calls (the algorithm splits each call into 256 B flash
+   pages internally).
+
 ## Internal-flash flashing benchmark (OpenOCD vs probe-rs)
 
 Same 178 KB internal image, KitProg3 SWD:

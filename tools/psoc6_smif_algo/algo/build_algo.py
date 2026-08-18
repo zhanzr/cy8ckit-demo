@@ -34,7 +34,7 @@ def run(cmd):
 
 
 def main() -> int:
-    page_size = int(sys.argv[1], 0) if len(sys.argv) > 1 else 0x200
+    page_size = int(sys.argv[1], 0) if len(sys.argv) > 1 else 0x1000
     run([GCC, "-mcpu=cortex-m4", "-mthumb", "-mfloat-abi=soft",
          "-ffreestanding", "-fno-builtin", "-fno-stack-protector",
          "-fomit-frame-pointer", "-O2", "-Wall", "-c",
