@@ -71,13 +71,16 @@ OBJS_CM4+=("$BUILD/cm4_syslib_ext.o")
 "$CC" "${CM4_CFLAGS[@]}" -c "cm4/main.c" -o "$BUILD/cm4_main.o"
 OBJS_CM4+=("$BUILD/cm4_main.o")
 
+"$CC" "${CM4_CFLAGS[@]}" -c "cm4/sar.c" -o "$BUILD/cm4_sar.o"
+OBJS_CM4+=("$BUILD/cm4_sar.o")
+
 "$CC" "${CM4_CFLAGS[@]}" -c "system/system_psoc6_cm4.c" -o "$BUILD/cm4_sysinit.o"
 OBJS_CM4+=("$BUILD/cm4_sysinit.o")
 
 "$CC" "${CM4_CFLAGS[@]}" -c "$CAT1A_SRC/cy_device.c" -o "$BUILD/cm4_device.o"
 OBJS_CM4+=("$BUILD/cm4_device.o")
 
-for f in cy_gpio cy_systick cy_wdt cy_sysint cy_syslib cy_sysclk cy_scb_uart cy_scb_common; do
+for f in cy_gpio cy_systick cy_wdt cy_sysint cy_syslib cy_sysclk cy_sysanalog cy_sar cy_scb_uart cy_scb_common; do
   "$CC" "${CM4_CFLAGS[@]}" -c "$PDL/drivers/source/$f.c" -o "$BUILD/cm4_$f.o"
   OBJS_CM4+=("$BUILD/cm4_$f.o")
 done

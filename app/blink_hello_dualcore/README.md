@@ -16,12 +16,30 @@ Dual-core PSoC 6 (CY8C6347BZI-BLD53 / CY8CKIT-062-BLE) demo:
 | CM0+ | LED4 | P1.5  | INV → 250 ms delay → LED5 → 250 ms (repeat)                  |
 | CM0+ | LED5 | P13.7 |                                                              |
 
-Every ~1 s each core prints (mutex-protected):
+Every ~1 s each core prints (mutex-protected), and the CM4 also reports the
+internal **die temperature** measured with the on-chip SAR ADC:
 
 ```
-[CM0] Core ID = 0, SysClk = 8000000 Hz
-[CM4] Core ID = 1, SysClk = 8000000 Hz
+[CM0] Core ID = 0, SysClk = 100000000 Hz
+[CM4] Core ID = 1, SysClk = 100000000 Hz, DieTemp = 35 C
 ```
+
+## SAR ADC — internal DieTemp channel
+
+The SAR ADC has an internal **die temperature sensor** (no external pin). The
+CM4 samples it on channel 0:
+
+- Input: `CY_SAR_MUX_FW_TEMP_VPLUS` (DieTemp → Vplus) + `CY_SAR_MUX_FW_VSSA_VMINUS`,
+  channel `CY_SAR_POS_PORT_ADDR_SARMUX_VIRT` / pin 0, single-ended, 32-sample
+  averaging, sample time ~1 us (sensor settling).
+- Reference: internal **1.2 V bandgap** (`CY_SAR_VREF_SEL_BGR`), Vminus = VSSA.
+- Clock: PeriClk / 3 ≈ 16.7 MHz on `PCLK_PASS_CLOCK_SAR`; requires the AREF
+  block (`Cy_SysAnalog_Init(&Cy_SysAnalog_Fast_Local)` + `Cy_SysAnalog_Enable`).
+- Conversion: `DieTemp_CountsTo_Celsius()` — fixed-point (Q16.16) using the
+  factory SFLASH calibration (`SFLASH->SAR_TEMP_OFFSET` / `SAR_TEMP_MULTIPLIER`),
+  same algorithm as the Infineon "Die Temperature" component.
+- Triggered in single-shot firmware mode and polled with
+  `Cy_SAR_IsEndConversion(SAR, CY_SAR_WAIT_FOR_RESULT)` (no interrupt).
 
 ## UART
 
@@ -103,7 +121,8 @@ Open a serial terminal on the KitProg3 COM port at **115200 8N1** to see the pri
 
 - `cm0p/main.c` — CM0+ application (LED4/LED5, UART init, starts CM4, printf)
 - `cm0p/uart.c` — SCB5 UART init, putc/puts, printf retarget (`_write`)
-- `cm4/main.c` — CM4 application (LED0/LED1/LED2, printf)
+- `cm4/main.c` — CM4 application (LED0/LED1/LED2, printf, DieTemp sampling)
+- `cm4/sar.c` / `sar.h` — SAR ADC DieTemp channel + counts-to-Celsius conversion
 - `linker/cm0plus.ld` / `linker/cm4.ld` — linker scripts (CM4 embeds the CM0+ image, shared region reserved)
 - `system/` — system_psoc6_cm0plus.c / cm4.c
 - `startup/` — startup_psoc6_01_cm0plus.S / cm4.S

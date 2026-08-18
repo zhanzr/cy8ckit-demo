@@ -6,8 +6,11 @@
 #include "cy_gpio.h"
 #include "cy_systick.h"
 #include "cy_scb_uart.h"
+#include "cy_sar.h"
 #include "system_psoc6.h"
 #include <stdio.h>
+
+#include "sar.h"
 
 /* Shared cross-core UART mutex + readiness flag (fixed SRAM addresses). */
 #define UART_LOCK_ADDR   ((volatile uint32_t *)0x08003040u)
@@ -100,6 +103,7 @@ int main(void)
     }
 
     led_init();
+    sar_temp_init();   /* SAR ADC configured on the internal DieTemp sensor */
 
     uint32_t last_print = 0;
 
@@ -115,12 +119,16 @@ int main(void)
         Cy_GPIO_Inv(GPIO_PRT1, 1u);
         delay_ms(250);
 
-        /* Periodic core-info print over the shared (mutex-protected) UART */
+        /* Periodic core-info + die-temperature print over the shared
+         * (mutex-protected) UART. The DieTemp sensor is an internal SAR
+         * channel (no external pin) measured against the 1.2 V bandgap. */
         if (systick_ms - last_print >= 1000u)
         {
             last_print = systick_ms;
+            int16_t die_temp = sar_temp_read_celsius();
             uart_lock();
-            printf("[CM4] Core ID = 1, SysClk = %lu Hz\r\n", (unsigned long)SystemCoreClock);
+            printf("[CM4] Core ID = 1, SysClk = %lu Hz, DieTemp = %d C\r\n",
+                   (unsigned long)SystemCoreClock, (int)die_temp);
             uart_unlock();
         }
     }
