@@ -1,0 +1,4 @@
+algo/flash.o
+algo/flash.elf
+algo/flash.bin
+harness/build/
