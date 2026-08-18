@@ -86,7 +86,7 @@ The short version (full diagnosis in [BOOT_ISSUE.md](BOOT_ISSUE.md)):
 
 ## How to build
 
-Both apps are built with `build.sh` (run in **Git Bash / MSYS2**; no
+Most apps are built with `build.sh` (run in **Git Bash / MSYS2**; no
 ModusToolbox project needed — plain arm-gcc + the MTB PDL sources).
 
 Prerequisites (paths are hard-coded in the scripts):
@@ -94,6 +94,24 @@ Prerequisites (paths are hard-coded in the scripts):
 - GNU Arm toolchain at `D:\arm-none-eabi-tc\bin\`
 - MTB PDL at `D:\board_database\main-cy8ckit-062\mtb-pdl-cat1-release-v3.23.0\`
 - CMSIS / core-lib headers are **vendored** in each app's `ext/cmsis` (no external dependency)
+
+### The ModusToolbox apps (`nor_benchmark_hal`, `xip_test`)
+
+These use the HAL SMIF driver. Their library dependencies are pinned as
+**git submodules** in `app/mtb_shared/` (10 libs, ~300 MB — too large to
+vendor, per the >200 MiB rule). On a fresh clone:
+
+```
+git submodule update --init --recursive
+```
+
+Then build with ModusToolbox 3.8 (modus-shell):
+
+```
+cd app/nor_benchmark_hal      # or app/xip_test
+make build TOOLCHAIN=GCC_ARM CONFIG=Debug -j4 MTB_SHARED_DIR=D:/cy8ckit-prj/app/mtb_shared
+```
+
 
 ```
 cd app/blink_hello_m0p

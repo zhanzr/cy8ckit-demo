@@ -1,0 +1,30 @@
+[submodule "app/mtb_shared/cat1cm0p/release-v1.11.0"]
+	path = app/mtb_shared/cat1cm0p/release-v1.11.0
+	url = https://github.com/Infineon/cat1cm0p
+[submodule "app/mtb_shared/cmsis/release-v6.1.0"]
+	path = app/mtb_shared/cmsis/release-v6.1.0
+	url = https://github.com/Infineon/cmsis
+[submodule "app/mtb_shared/core-lib/release-v1.8.0"]
+	path = app/mtb_shared/core-lib/release-v1.8.0
+	url = https://github.com/cypresssemiconductorco/core-lib
+[submodule "app/mtb_shared/core-make/release-v3.9.0"]
+	path = app/mtb_shared/core-make/release-v3.9.0
+	url = https://github.com/cypresssemiconductorco/core-make
+[submodule "app/mtb_shared/device-db/release-v4.39.0"]
+	path = app/mtb_shared/device-db/release-v4.39.0
+	url = https://github.com/Infineon/device-db
+[submodule "app/mtb_shared/mtb-hal-cat1/release-v2.7.4"]
+	path = app/mtb_shared/mtb-hal-cat1/release-v2.7.4
+	url = https://github.com/cypresssemiconductorco/mtb-hal-cat1
+[submodule "app/mtb_shared/mtb-pdl-cat1/release-v3.23.0"]
+	path = app/mtb_shared/mtb-pdl-cat1/release-v3.23.0
+	url = https://github.com/cypresssemiconductorco/mtb-pdl-cat1
+[submodule "app/mtb_shared/recipe-make-cat1a/release-v2.8.0"]
+	path = app/mtb_shared/recipe-make-cat1a/release-v2.8.0
+	url = https://github.com/cypresssemiconductorco/recipe-make-cat1a
+[submodule "app/mtb_shared/retarget-io/release-v1.10.0"]
+	path = app/mtb_shared/retarget-io/release-v1.10.0
+	url = https://github.com/cypresssemiconductorco/retarget-io
+[submodule "app/mtb_shared/serial-flash/release-v1.4.3"]
+	path = app/mtb_shared/serial-flash/release-v1.4.3
+	url = https://github.com/cypresssemiconductorco/serial-flash
