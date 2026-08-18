@@ -41,6 +41,8 @@ Key onboard resources used by the demos:
 |-----|---------|--------------|--------|
 | [`app/blink_hello_m0p`](app/blink_hello_m0p) | CM0+ only | Boot-issue demo: runs at **100 MHz**, blinks LED4/LED5, prints alive messages on UART | working |
 | [`app/blink_hello_dualcore`](app/blink_hello_dualcore) | CM0p + CM4 | Dual-core blink + shared-UART `printf`, both cores at **100 MHz** | working |
+| [`app/dhry_100m_100m`](app/dhry_100m_100m) | CM0p + CM4 | Dhrystone 2.1 on both cores at **100 MHz**, atomic result blocks | working |
+| [`app/coremark_100m_100m`](app/coremark_100m_100m) | CM0p + CM4 | CoreMark 1.0 on both cores at **100 MHz**, atomic result blocks | working |
 
 ### blink_hello_m0p — the boot-issue demo
 
