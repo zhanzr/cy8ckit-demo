@@ -46,7 +46,7 @@ Both cores share one UART, so a simple spinlock serializes `printf`:
 
 ## Build
 
-- `build.ps1` (Windows PowerShell) or `make` (the bundled Makefile needs a tab fix).
+- `build.sh` (run in **Git Bash / MSYS2**: `./build.sh`).
 - Outputs in `build/`:
   - `cm0p.elf` / `cm0p.hex` — CM0+ image (placed at 0x10000000)
   - `cm4.elf` / `cm4.hex` — CM4 image (placed at 0x10020000, with the CM0+ binary embedded)
@@ -101,12 +101,9 @@ Open a serial terminal on the KitProg3 COM port at **115200 8N1** to see the pri
 
 ## Project layout
 
-```
-cm0p/main.c       CM0+ application (LED4/LED5, UART init, starts CM4, printf)
-cm0p/uart.c       SCB5 UART init, putc/puts, printf retarget (_write)
-cm4/main.c        CM4 application (LED0/LED1/LED2, printf)
-linker/cm0plus.ld CM0+ linker script
-linker/cm4.ld     CM4 linker script (CM0+ image embedded, shared region reserved)
-system/           system_psoc6_cm0plus.c / cm4.c
-startup/          startup_psoc6_01_cm0plus.S / cm4.S
-```
+- `cm0p/main.c` — CM0+ application (LED4/LED5, UART init, starts CM4, printf)
+- `cm0p/uart.c` — SCB5 UART init, putc/puts, printf retarget (`_write`)
+- `cm4/main.c` — CM4 application (LED0/LED1/LED2, printf)
+- `linker/cm0plus.ld` / `linker/cm4.ld` — linker scripts (CM4 embeds the CM0+ image, shared region reserved)
+- `system/` — system_psoc6_cm0plus.c / cm4.c
+- `startup/` — startup_psoc6_01_cm0plus.S / cm4.S
