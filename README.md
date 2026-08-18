@@ -1,7 +1,7 @@
 # CY8CKIT-062-BLE — PSoC 6 BLE bring-up, apps and boot workaround
 
 Everything in this repo is tied to a **CY8CKIT-062-BLE** board (PSoC 6 BLE,
-**CY8C6347BZI-BLD53**, dual core: CM0+ + CM4, 1 MB flash, 288 KB SRAM).
+**CY8C6347BZI-BLD53**, dual core: CM0p + CM4, 1 MB flash, 288 KB SRAM).
 
 > **The one important caveat:** the PSoC 6 boot ROM on this board does **not**
 > auto-boot any application after reset / power-cycle. The CM0+ is left *held*
@@ -40,7 +40,7 @@ Key onboard resources used by the demos:
 | App | Core(s) | What it does | Status |
 |-----|---------|--------------|--------|
 | [`app/blink_hello_m0p`](app/blink_hello_m0p) | CM0+ only | Boot-issue demo: runs at **100 MHz**, blinks LED4/LED5, prints alive messages on UART | working |
-| [`app/blink_hello_dualcore`](app/blink_hello_dualcore) | CM0+ + CM4 | Dual-core blink + shared-UART `printf`, both cores at **100 MHz** | working |
+| [`app/blink_hello_dualcore`](app/blink_hello_dualcore) | CM0p + CM4 | Dual-core blink + shared-UART `printf`, both cores at **100 MHz** | working |
 
 ### blink_hello_m0p — the boot-issue demo
 
@@ -87,7 +87,7 @@ Prerequisites (paths are hard-coded in the scripts):
 
 - GNU Arm toolchain at `D:\arm-none-eabi-tc\bin\`
 - MTB PDL at `D:\board_database\main-cy8ckit-062\mtb-pdl-cat1-release-v3.23.0\`
-- CMSIS / core-lib at `D:\modubus_wks\mtb_shared\`
+- CMSIS / core-lib headers are **vendored** in each app's `ext/cmsis` (no external dependency)
 
 ```
 cd app/blink_hello_m0p
@@ -110,10 +110,7 @@ C:\Infineon\Tools\ModusToolboxProgtools-1.9\openocd\bin\openocd.exe
 `tools/flash_and_boot.tcl` programs the hex and jumps to the CM0+ image:
 
 ```
-C:\Infineon\Tools\ModusToolboxProgtools-1.9\openocd\bin\openocd.exe ^
-  -c "set HEX D:/cy8ckit-prj/app/blink_hello_m0p/build/cm0p.hex" ^
-  -c "adapter speed 1000" -c "source [find interface/kitprog3.cfg]" -c "source [find target/infineon/cy8c6xx.cfg]" ^
-  -c "init" -c "source D:/cy8ckit-prj/tools/flash_and_boot.tcl"
+C:\Infineon\Tools\ModusToolboxProgtools-1.9\openocd\bin\openocd.exe -c "set HEX D:/cy8ckit-prj/app/blink_hello_m0p/build/cm0p.hex" -c "adapter speed 1000" -c "source [find interface/kitprog3.cfg]" -c "source [find target/infineon/cy8c6xx.cfg]" -c "init" -c "source D:/cy8ckit-prj/tools/flash_and_boot.tcl"
 ```
 
 For the dualcore app, point `HEX` at `.../blink_hello_dualcore/build/combined.hex`.
@@ -123,9 +120,7 @@ For the dualcore app, point `HEX` at `.../blink_hello_dualcore/build/combined.he
 `tools/boot_only.tcl` re-jumps to the already-flashed CM0+ image:
 
 ```
-C:\Infineon\Tools\ModusToolboxProgtools-1.9\openocd\bin\openocd.exe ^
-  -c "adapter speed 1000" -c "source [find interface/kitprog3.cfg]" -c "source [find target/infineon/cy8c6xx.cfg]" ^
-  -c "init" -c "source D:/cy8ckit-prj/tools/boot_only.tcl"
+C:\Infineon\Tools\ModusToolboxProgtools-1.9\openocd\bin\openocd.exe -c "adapter speed 1000" -c "source [find interface/kitprog3.cfg]" -c "source [find target/infineon/cy8c6xx.cfg]" -c "init" -c "source D:/cy8ckit-prj/tools/boot_only.tcl"
 ```
 
 Then open a serial terminal on the KitProg3 COM port at **115200 8N1**.

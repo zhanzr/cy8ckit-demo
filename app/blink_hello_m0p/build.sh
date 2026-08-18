@@ -7,8 +7,6 @@ set -e
 
 TC="D:/arm-none-eabi-tc/bin/arm-none-eabi"
 PDL="D:/board_database/main-cy8ckit-062/mtb-pdl-cat1-release-v3.23.0"
-CMSIS="D:/modubus_wks/mtb_shared/cmsis/release-v5.8.0/Core/Include"
-CORELIB="D:/modubus_wks/mtb_shared/core-lib/release-v1.8.0/include"
 DEVICES="$PDL/devices/COMPONENT_CAT1A"
 CAT1A_SRC="$DEVICES/source"
 
@@ -16,7 +14,7 @@ BUILD="build"
 mkdir -p "$BUILD"
 
 DEFINES=("-D__NO_SYSTEM_INIT" "-DCY8C6347BZI_BLD53" "-DCOMPONENT_PSOC6_01" "-DCY_IPC_DEFAULT_CFG_DISABLE")
-INC=("-Isystem" "-Iext/ext/cmsis" "-I$CMSIS" "-I$CORELIB" "-I$DEVICES/include" "-I$DEVICES/include/ip" "-I$PDL/drivers/include")
+INC=("-Isystem" "-Iext/ext/cmsis" "-I$DEVICES/include" "-I$DEVICES/include/ip" "-I$PDL/drivers/include")
 
 CFLAGS=("-mcpu=cortex-m0plus" "-mthumb" "-mfloat-abi=soft" "-Wall" "-Wextra" "-Wno-unused-parameter" "-Wno-unused-variable" "${DEFINES[@]}" "-g" "-Os" "${INC[@]}" "-ffunction-sections" "-fdata-sections" "-std=gnu11")
 ASFLAGS=("-mcpu=cortex-m0plus" "-mthumb" "-x" "assembler-with-cpp" "${DEFINES[@]}" "${INC[@]}")

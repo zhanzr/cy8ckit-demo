@@ -10,8 +10,6 @@ OBJCOPY="D:/arm-none-eabi-tc/bin/arm-none-eabi-objcopy.exe"
 SIZE="D:/arm-none-eabi-tc/bin/arm-none-eabi-size.exe"
 
 PDL="D:/board_database/main-cy8ckit-062/mtb-pdl-cat1-release-v3.23.0"
-CMSIS="D:/modubus_wks/mtb_shared/cmsis/release-v5.8.0/Core/Include"
-UTILS="D:/modubus_wks/mtb_shared/core-lib/release-v1.8.0/include"
 DEVICES="$PDL/devices/COMPONENT_CAT1A"
 CAT1A_SRC="$DEVICES/source"
 
@@ -19,7 +17,7 @@ BUILD="build"
 mkdir -p "$BUILD"
 
 DEFINES=("-DCY8C6347BZI_BLD53" "-DCOMPONENT_PSOC6_01" "-DCY_IPC_DEFAULT_CFG_DISABLE" "-DCY_CORTEX_M4_APPL_ADDR=0x10020000")
-INC=("-Isystem" "-Iext/cmsis" "-I$CMSIS" "-I$UTILS" "-I$DEVICES/include" "-I$DEVICES/include/ip" "-I$PDL/drivers/include")
+INC=("-Isystem" "-Iext/cmsis" "-I$DEVICES/include" "-I$DEVICES/include/ip" "-I$PDL/drivers/include")
 
 CM0P_CFLAGS=("-mcpu=cortex-m0plus" "-mthumb" "-mfloat-abi=soft" "-Os" "-g" "-Wall" "-ffunction-sections" "-fdata-sections" "-Wno-unused-variable" "${DEFINES[@]}" "${INC[@]}")
 CM4_CFLAGS=("-mcpu=cortex-m4" "-mthumb" "-mfloat-abi=hard" "-mfpu=fpv4-sp-d16" "-Os" "-g" "-Wall" "-ffunction-sections" "-fdata-sections" "-Wno-unused-variable" "${DEFINES[@]}" "${INC[@]}")

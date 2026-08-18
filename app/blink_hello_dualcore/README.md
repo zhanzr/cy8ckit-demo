@@ -101,18 +101,13 @@ Key build defines:
 First time / after a code change (program + boot):
 
 ```
-C:\Infineon\Tools\ModusToolboxProgtools-1.9\openocd\bin\openocd.exe ^
-  -c "set HEX D:/cy8ckit-prj/app/blink_hello_dualcore/build/combined.hex" ^
-  -c "adapter speed 1000" -c "source [find interface/kitprog3.cfg]" -c "source [find target/infineon/cy8c6xx.cfg]" ^
-  -c "init" -c "source D:/cy8ckit-prj/tools/flash_and_boot.tcl"
+C:\Infineon\Tools\ModusToolboxProgtools-1.9\openocd\bin\openocd.exe -c "set HEX D:/cy8ckit-prj/app/blink_hello_dualcore/build/combined.hex" -c "adapter speed 1000" -c "source [find interface/kitprog3.cfg]" -c "source [find target/infineon/cy8c6xx.cfg]" -c "init" -c "source D:/cy8ckit-prj/tools/flash_and_boot.tcl"
 ```
 
 After a power cycle / reset (re-boot, no re-flash):
 
 ```
-C:\Infineon\Tools\ModusToolboxProgtools-1.9\openocd\bin\openocd.exe ^
-  -c "adapter speed 1000" -c "source [find interface/kitprog3.cfg]" -c "source [find target/infineon/cy8c6xx.cfg]" ^
-  -c "init" -c "source D:/cy8ckit-prj/tools/boot_only.tcl"
+C:\Infineon\Tools\ModusToolboxProgtools-1.9\openocd\bin\openocd.exe -c "adapter speed 1000" -c "source [find interface/kitprog3.cfg]" -c "source [find target/infineon/cy8c6xx.cfg]" -c "init" -c "source D:/cy8ckit-prj/tools/boot_only.tcl"
 ```
 
 Open a serial terminal on the KitProg3 COM port at **115200 8N1** to see the prints.

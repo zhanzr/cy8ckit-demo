@@ -101,18 +101,13 @@ Both do a full reset-and-run: they set `SP`/`PC` from the CM0+ vector table at
 ### First time / after a code change (program + run)
 
 ```
-C:\Infineon\Tools\ModusToolboxProgtools-1.9\openocd\bin\openocd.exe ^
-  -c "set HEX D:/mtb_vs_prj/hw/build/last_config/mtb-example-hal-hello-world.hex" ^
-  -c "adapter speed 1000" -c "source [find interface/kitprog3.cfg]" -c "source [find target/infineon/cy8c6xx.cfg]" ^
-  -c "init" -c "source D:/cy8ckit-prj/tools/flash_and_boot.tcl"
+C:\Infineon\Tools\ModusToolboxProgtools-1.9\openocd\bin\openocd.exe -c "set HEX D:/mtb_vs_prj/hw/build/last_config/mtb-example-hal-hello-world.hex" -c "adapter speed 1000" -c "source [find interface/kitprog3.cfg]" -c "source [find target/infineon/cy8c6xx.cfg]" -c "init" -c "source D:/cy8ckit-prj/tools/flash_and_boot.tcl"
 ```
 
 ### After a power cycle / reset (re-run, no flash)
 
 ```
-C:\Infineon\Tools\ModusToolboxProgtools-1.9\openocd\bin\openocd.exe ^
-  -c "adapter speed 1000" -c "source [find interface/kitprog3.cfg]" -c "source [find target/infineon/cy8c6xx.cfg]" ^
-  -c "init" -c "source D:/cy8ckit-prj/tools/boot_only.tcl"
+C:\Infineon\Tools\ModusToolboxProgtools-1.9\openocd\bin\openocd.exe -c "adapter speed 1000" -c "source [find interface/kitprog3.cfg]" -c "source [find target/infineon/cy8c6xx.cfg]" -c "init" -c "source D:/cy8ckit-prj/tools/boot_only.tcl"
 ```
 
 The app keeps running after the OpenOCD session exits (verified: LED keeps blinking).
