@@ -1,0 +1,23 @@
+# Build outputs
+**/build/
+build/
+
+# Compiled object / binary artifacts
+*.o
+*.elf
+*.hex
+*.bin
+*.map
+*.d
+*.lst
+*.srec
+*.axf
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
