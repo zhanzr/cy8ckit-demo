@@ -44,6 +44,7 @@ Key onboard resources used by the demos:
 | [`app/dhry_100m_100m`](app/dhry_100m_100m) | CM0p + CM4 | Dhrystone 2.1 on both cores at **100 MHz**, atomic result blocks | working |
 | [`app/coremark_100m_100m`](app/coremark_100m_100m) | CM0p + CM4 | CoreMark 1.0 on both cores at **100 MHz**, atomic result blocks | working |
 | [`app/nor_benchmark`](app/nor_benchmark) | CM0p + CM4 | S25FL512S SPI NOR erase/program/read benchmark (GPIO bit-bang) | working |
+| [`app/cm4_external_app`](app/cm4_external_app) | CM0p + CM4 | CM4 app stored in the external NOR, read back + booted by the CM0p | partial (SMIF/XIP blocked) |
 
 ### blink_hello_m0p — the boot-issue demo
 
