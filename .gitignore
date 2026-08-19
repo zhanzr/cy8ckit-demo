@@ -27,3 +27,7 @@ Thumbs.db
 
 # Logs
 *.log
+
+# MTB shared asset symlinks (machine-specific, populated by getlibs/setup)
+app/mtb_shared/
+
