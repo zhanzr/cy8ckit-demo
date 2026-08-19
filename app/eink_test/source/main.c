@@ -25,10 +25,10 @@
 #define EPD_ROW_BYTES   (MTB_E2271CS021_DISPLAY_SIZE_X / 8u)
 #define FRAME_BYTES     MTB_E2271CS021_FRAME_SIZE
 
-/* Delay between pattern refreshes. The EPD's FULL_4STAGE update already takes
- * ~2-4 s (e-paper waveform), so this is just a short settle time to reach the
- * maximum practical refresh rate. */
-#define PATTERN_DELAY_MS 250u
+/* Delay between pattern refreshes. Kept conservative for now; the official
+ * emWin+FreeRTOS example refreshes much faster, so this can likely be reduced
+ * substantially. TODO(eink_test): tune refresh rate for max speed. */
+#define PATTERN_DELAY_MS 4000u
 
 static const mtb_e2271cs021_pins_t eink_pins =
 {
@@ -143,6 +143,9 @@ int main(void)
 
     __enable_irq();
 
+    /* LED0 = P11.1 (blue) on CY8CKIT-062-BLE, toggled after each refresh. */
+    cyhal_gpio_init(P11_1, CYHAL_GPIO_DIR_OUTPUT, CYHAL_GPIO_DRIVE_STRONG, true);
+
     printf("\r\n=== eink_test: E2271CS021 on CY8CKIT-062-BLE (no RTOS/emWin) ===\r\n");
 
     cyhal_spi_t spi;
@@ -171,24 +174,28 @@ int main(void)
         printf("show checkerboard\r\n");
         mtb_e2271cs021_show_frame(prev_frame, frame, MTB_E2271CS021_FULL_4STAGE, true);
         memcpy(prev_frame, frame, FRAME_BYTES);
+        cyhal_gpio_toggle(P11_1);
         cyhal_system_delay_ms(PATTERN_DELAY_MS);
 
         pattern_bars_h();
         printf("show horizontal bars\r\n");
         mtb_e2271cs021_show_frame(prev_frame, frame, MTB_E2271CS021_FULL_4STAGE, true);
         memcpy(prev_frame, frame, FRAME_BYTES);
+        cyhal_gpio_toggle(P11_1);
         cyhal_system_delay_ms(PATTERN_DELAY_MS);
 
         pattern_bars_v();
         printf("show vertical bars\r\n");
         mtb_e2271cs021_show_frame(prev_frame, frame, MTB_E2271CS021_FULL_4STAGE, true);
         memcpy(prev_frame, frame, FRAME_BYTES);
+        cyhal_gpio_toggle(P11_1);
         cyhal_system_delay_ms(PATTERN_DELAY_MS);
 
         pattern_box();
         printf("show box\r\n");
         mtb_e2271cs021_show_frame(prev_frame, frame, MTB_E2271CS021_FULL_4STAGE, true);
         memcpy(prev_frame, frame, FRAME_BYTES);
+        cyhal_gpio_toggle(P11_1);
         cyhal_system_delay_ms(PATTERN_DELAY_MS);
     }
 }

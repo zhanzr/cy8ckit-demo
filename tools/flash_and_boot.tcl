@@ -1,5 +1,6 @@
 # flash_and_boot.tcl - Program a hex and manually boot both cores
-# (for the ModusToolbox / Cypress openocd).
+# (for the ModusToolbox / Cypress openocd). Programs the image, then boots
+# the CM0+ image from its vector table and resumes both cores.
 # Usage:
 #   C:/Infineon/Tools/ModusToolboxProgtools-1.9/openocd/bin/openocd.exe \
 #       -c "set HEX D:/.../<app>.hex" \
