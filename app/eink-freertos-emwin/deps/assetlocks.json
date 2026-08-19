@@ -1,0 +1,22 @@
+[
+    {
+        "asset-name": "abstraction-rtos",
+        "locked-commit": "release-v1.13.0"
+    },
+    {
+        "asset-name": "clib-support",
+        "locked-commit": "release-v1.9.0"
+    },
+    {
+        "asset-name": "display-eink-e2271cs021",
+        "locked-commit": "release-v1.1.0"
+    },
+    {
+        "asset-name": "sensor-motion-bmi160",
+        "locked-commit": "release-v1.1.2"
+    },
+    {
+        "asset-name": "thermistor",
+        "locked-commit": "release-v2.1.0"
+    }
+]

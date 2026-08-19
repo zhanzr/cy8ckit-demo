@@ -29,5 +29,9 @@ Thumbs.db
 *.log
 
 # MTB shared asset symlinks (machine-specific, populated by getlibs/setup)
-app/mtb_shared/
+
+
+# Non-vendored getlibs artifacts (not part of the vendored deps)
+app/mtb_shared/device-db/
+app/mtb_shared/serial-flash/
 

@@ -1,0 +1,5 @@
+build/
+last_config/
+.mtbqueryapi
+.ninja_log
+.cache

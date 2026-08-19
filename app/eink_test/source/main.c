@@ -25,6 +25,11 @@
 #define EPD_ROW_BYTES   (MTB_E2271CS021_DISPLAY_SIZE_X / 8u)
 #define FRAME_BYTES     MTB_E2271CS021_FRAME_SIZE
 
+/* Delay between pattern refreshes. The EPD's FULL_4STAGE update already takes
+ * ~2-4 s (e-paper waveform), so this is just a short settle time to reach the
+ * maximum practical refresh rate. */
+#define PATTERN_DELAY_MS 250u
+
 static const mtb_e2271cs021_pins_t eink_pins =
 {
     .spi_mosi  = P12_0,
@@ -166,24 +171,24 @@ int main(void)
         printf("show checkerboard\r\n");
         mtb_e2271cs021_show_frame(prev_frame, frame, MTB_E2271CS021_FULL_4STAGE, true);
         memcpy(prev_frame, frame, FRAME_BYTES);
-        cyhal_system_delay_ms(4000);
+        cyhal_system_delay_ms(PATTERN_DELAY_MS);
 
         pattern_bars_h();
         printf("show horizontal bars\r\n");
         mtb_e2271cs021_show_frame(prev_frame, frame, MTB_E2271CS021_FULL_4STAGE, true);
         memcpy(prev_frame, frame, FRAME_BYTES);
-        cyhal_system_delay_ms(4000);
+        cyhal_system_delay_ms(PATTERN_DELAY_MS);
 
         pattern_bars_v();
         printf("show vertical bars\r\n");
         mtb_e2271cs021_show_frame(prev_frame, frame, MTB_E2271CS021_FULL_4STAGE, true);
         memcpy(prev_frame, frame, FRAME_BYTES);
-        cyhal_system_delay_ms(4000);
+        cyhal_system_delay_ms(PATTERN_DELAY_MS);
 
         pattern_box();
         printf("show box\r\n");
         mtb_e2271cs021_show_frame(prev_frame, frame, MTB_E2271CS021_FULL_4STAGE, true);
         memcpy(prev_frame, frame, FRAME_BYTES);
-        cyhal_system_delay_ms(4000);
+        cyhal_system_delay_ms(PATTERN_DELAY_MS);
     }
 }
