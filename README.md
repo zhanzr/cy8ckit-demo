@@ -46,6 +46,7 @@ Key onboard resources used by the demos:
 | [`app/nor_benchmark`](app/nor_benchmark) | CM0p + CM4 | S25FL512S SPI NOR erase/program/read benchmark (GPIO bit-bang) | working |
 | [`app/nor_benchmark_hal`](app/nor_benchmark_hal) | CM4 (MTB) | S25FL512S benchmark with the **hardware SMIF** (HAL), 50 MHz | working |
 | [`app/xip_test`](app/xip_test) | CM4 (MTB) | QSPI **XIP** test: program external NOR + read back via 0x18000000 | working |
+| [`app/capsense_test`](app/capsense_test) | CM4 (MTB) | CAPSENSE **buttons + 5-segment slider** demo (2 CSX buttons + CSD slider, LED brightness) | working |
 | [`app/cm4_external_app`](app/cm4_external_app) | CM0p + CM4 | CM4 app stored in the external NOR, read back + booted by the CM0p | partial (SMIF/XIP blocked) |
 
 ## Apps in `app_ext/` (external-NOR XIP)
@@ -61,6 +62,7 @@ source live in `app_ext/common/`.
 | [`app_ext/coremark_150m`](app_ext/coremark_150m) | CoreMark 1.0 on the CM4 @ 150 MHz, running from XIP | working |
 | [`app_ext/dhry_150m`](app_ext/dhry_150m) | Dhrystone 2.1 on the CM4 @ 150 MHz, running from XIP | working |
 | [`app_ext/eink_test`](app_ext/eink_test) | E2271CS021 E-ink demo (cyhal SPI) from XIP, cycles 4 full-screen patterns | working |
+| [`app_ext/capsense_test`](app_ext/capsense_test) | CAPSENSE buttons + slider from XIP (cyhal + capsense middleware @ 150 MHz) | working |
 
 Key facts (shared across `app_ext`):
 
