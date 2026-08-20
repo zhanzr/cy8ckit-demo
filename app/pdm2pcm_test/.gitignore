@@ -1,0 +1,5 @@
+﻿build/
+last_config/
+
+# BSP junction -> board_database (machine-specific)
+bsps/

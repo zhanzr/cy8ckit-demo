@@ -48,6 +48,7 @@ Key onboard resources used by the demos:
 | [`app/xip_test`](app/xip_test) | CM4 (MTB) | QSPI **XIP** test: program external NOR + read back via 0x18000000 | working |
 | [`app/capsense_test`](app/capsense_test) | CM4 (MTB) | CAPSENSE **buttons + 5-segment slider** demo (2 CSX buttons + CSD slider, LED brightness) | working |
 | [`app/bmi160_freertos`](app/bmi160_freertos) | CM4 (MTB) | BMI160 **motion-sensor orientation** demo over I2C (FreeRTOS, EPD shield) | working |
+| [`app/pdm2pcm_test`](app/pdm2pcm_test) | CM4 (MTB) | PDM/PCM **microphone capture** demo (EPD shield mic, volume bar + LED) | working |
 | [`app/cm4_external_app`](app/cm4_external_app) | CM0p + CM4 | CM4 app stored in the external NOR, read back + booted by the CM0p | partial (SMIF/XIP blocked) |
 
 ## Apps in `app_ext/` (external-NOR XIP)
@@ -65,6 +66,7 @@ source live in `app_ext/common/`.
 | [`app_ext/eink_test`](app_ext/eink_test) | E2271CS021 E-ink demo (cyhal SPI) from XIP, cycles 4 full-screen patterns | working |
 | [`app_ext/capsense_test`](app_ext/capsense_test) | CAPSENSE buttons + slider from XIP (cyhal + capsense middleware @ 150 MHz) | working |
 | [`app_ext/bmi160_freertos`](app_ext/bmi160_freertos) | BMI160 motion-sensor orientation from XIP (FreeRTOS @ 150 MHz) | working |
+| [`app_ext/pdm2pcm_test`](app_ext/pdm2pcm_test) | PDM/PCM mic capture from XIP (volume bar + LED @ 150 MHz) | working |
 
 Key facts (shared across `app_ext`):
 
