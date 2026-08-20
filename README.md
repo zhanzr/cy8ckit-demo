@@ -49,6 +49,7 @@ Key onboard resources used by the demos:
 | [`app/capsense_test`](app/capsense_test) | CM4 (MTB) | CAPSENSE **buttons + 5-segment slider** demo (2 CSX buttons + CSD slider, LED brightness) | working |
 | [`app/bmi160_freertos`](app/bmi160_freertos) | CM4 (MTB) | BMI160 **motion-sensor orientation** demo over I2C (FreeRTOS, EPD shield) | working |
 | [`app/pdm2pcm_test`](app/pdm2pcm_test) | CM4 (MTB) | PDM/PCM **microphone capture** demo (EPD shield mic, volume bar + LED) | working |
+| [`app/ntc_test`](app/ntc_test) | CM4 (MTB) | **NTC thermistor + internal DieTemp** (EPD shield, raw SAR counts + best-effort C) | working |
 | [`app/cm4_external_app`](app/cm4_external_app) | CM0p + CM4 | CM4 app stored in the external NOR, read back + booted by the CM0p | partial (SMIF/XIP blocked) |
 
 ## Apps in `app_ext/` (external-NOR XIP)
@@ -67,6 +68,7 @@ source live in `app_ext/common/`.
 | [`app_ext/capsense_test`](app_ext/capsense_test) | CAPSENSE buttons + slider from XIP (cyhal + capsense middleware @ 150 MHz) | working |
 | [`app_ext/bmi160_freertos`](app_ext/bmi160_freertos) | BMI160 motion-sensor orientation from XIP (FreeRTOS @ 150 MHz) | working |
 | [`app_ext/pdm2pcm_test`](app_ext/pdm2pcm_test) | PDM/PCM mic capture from XIP (volume bar + LED @ 150 MHz) | working |
+| [`app_ext/ntc_test`](app_ext/ntc_test) | NTC thermistor + internal DieTemp from XIP (raw SAR counts + best-effort C @ 150 MHz) | working |
 
 Key facts (shared across `app_ext`):
 
