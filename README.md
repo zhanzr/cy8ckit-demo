@@ -122,27 +122,30 @@ The short version (full diagnosis in [BOOT_ISSUE.md](BOOT_ISSUE.md)):
 Most apps are built with `build.sh` (run in **Git Bash / MSYS2**; no
 ModusToolbox project needed — plain arm-gcc + the MTB PDL sources).
 
-Prerequisites (paths are hard-coded in the scripts):
+Prerequisites (paths are hard-coded in the scripts; the repo is fully
+self-contained — no external `board_database`):
 
 - GNU Arm toolchain at `D:\arm-none-eabi-tc\bin\`
-- MTB PDL at `D:\board_database\main-cy8ckit-062\mtb-pdl-cat1-release-v3.23.0\`
-- CMSIS / core-lib headers are **vendored** in each app's `ext/cmsis` (no external dependency)
+- MTB PDL, HAL, CMSIS, core-lib, middleware: **vendored** in `app/mtb_shared/`
+  (the `build.sh` scripts resolve them relative to the repo)
+- Board Support Package: **vendored** at `board/TARGET_CY8CKIT-062-BLE-release-v4.2.0/`
+  (used by the `app/` MTB builds and the `app_ext/` builds)
 
 ### The ModusToolbox apps (`nor_benchmark_hal`, `xip_test`)
 
-These use the HAL SMIF driver. Their library dependencies are pinned as
-**git submodules** in `app/mtb_shared/` (10 libs, ~300 MB — too large to
-vendor, per the >200 MiB rule). On a fresh clone:
+These use the HAL SMIF driver. Their library dependencies are **vendored** in
+`app/mtb_shared/` (a couple are git submodules; on a fresh clone run
+`git submodule update --init --recursive`). The BSP is vendored in `board/`.
 
-```
-git submodule update --init --recursive
-```
-
-Then build with ModusToolbox 3.8 (modus-shell):
+Build with ModusToolbox 3.8 (modus-shell), after `make getlibs` once to
+resolve the pinned middleware versions:
 
 ```
 cd app/nor_benchmark_hal      # or app/xip_test
-make build TOOLCHAIN=GCC_ARM CONFIG=Debug -j4 MTB_SHARED_DIR=D:/cy8ckit-prj/app/mtb_shared
+make getlibs TOOLCHAIN=GCC_ARM
+make build TOOLCHAIN=GCC_ARM CONFIG=Debug -j4 \
+    SEARCH_TARGET_APP_CY8CKIT-062-BLE=D:/cy8ckit-prj/board/TARGET_CY8CKIT-062-BLE-release-v4.2.0 \
+    MTB_SHARED_DIR=D:/cy8ckit-prj/app/mtb_shared
 ```
 
 

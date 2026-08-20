@@ -20,9 +20,8 @@ IOEN P0[2]  (D7)    (IOEN active-low: LOW enables the level translator)
 ```
 
 ## Build (offline)
-Dependencies live in the workspace `mtb_shared`
-(`D:/board_database/main-cy8ckit-062/mtb_shared` and the project-local
-`../mtb_shared` symlinks). Requires ModusToolbox tools_3.8 at
+Dependencies are vendored in the repo (`../mtb_shared` + the BSP in
+`../../board/`). Requires ModusToolbox tools_3.8 at
 `C:/Users/user1/ModusToolbox/tools_3.8`.
 
 ```bash

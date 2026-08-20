@@ -99,9 +99,9 @@ SOURCES=
 
 # Like SOURCES, but for include directories. Value should be paths to
 # directories (without a leading -I).
-INCLUDES=bsps/TARGET_APP_CY8CKIT-062-BLE \
-         bsps/TARGET_APP_CY8CKIT-062-BLE/config \
-         bsps/TARGET_APP_CY8CKIT-062-BLE/config/GeneratedSource \
+INCLUDES=../../board/TARGET_CY8CKIT-062-BLE-release-v4.2.0 \
+         ../../board/TARGET_CY8CKIT-062-BLE-release-v4.2.0/config \
+         ../../board/TARGET_CY8CKIT-062-BLE-release-v4.2.0/config/GeneratedSource \
          ../mtb_shared/mtb-hal-cat1/release-v2.7.4/include \
          ../mtb_shared/mtb-hal-cat1/release-v2.7.4/include_pvt \
          ../mtb_shared/mtb-hal-cat1/release-v2.7.4/COMPONENT_CAT1A/include \

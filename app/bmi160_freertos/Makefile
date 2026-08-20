@@ -69,9 +69,9 @@ SOURCES=$(wildcard ../mtb_shared/mtb-hal-cat1/release-v2.7.4/source/*.c) \
         ../mtb_shared/BMI160_driver/bmi160_v3.9.1/bmi160.c
 
 # Like SOURCES, but for include directories.
-INCLUDES=bsps/TARGET_APP_CY8CKIT-062-BLE \
-         bsps/TARGET_APP_CY8CKIT-062-BLE/config \
-         bsps/TARGET_APP_CY8CKIT-062-BLE/config/GeneratedSource \
+INCLUDES=../../board/TARGET_CY8CKIT-062-BLE-release-v4.2.0 \
+         ../../board/TARGET_CY8CKIT-062-BLE-release-v4.2.0/config \
+         ../../board/TARGET_CY8CKIT-062-BLE-release-v4.2.0/config/GeneratedSource \
          ../mtb_shared/mtb-hal-cat1/release-v2.7.4/include \
          ../mtb_shared/mtb-hal-cat1/release-v2.7.4/include_pvt \
          ../mtb_shared/mtb-hal-cat1/release-v2.7.4/COMPONENT_CAT1A/include \

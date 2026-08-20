@@ -17,8 +17,9 @@ set -e
 CC="D:/arm-none-eabi-tc/bin/arm-none-eabi-gcc.exe"
 OBJCOPY="D:/arm-none-eabi-tc/bin/arm-none-eabi-objcopy.exe"
 
-PDL="D:/board_database/main-cy8ckit-062/mtb-pdl-cat1-release-v3.23.0"
-BSP="D:/board_database/main-cy8ckit-062/TARGET_CY8CKIT-062-BLE-release-v4.2.0"
+REPO="$(cygpath -m "$(cd "$(dirname "$0")/../.." && pwd)")"
+PDL="$REPO/app/mtb_shared/mtb-pdl-cat1/release-v3.23.0"
+BSP="$REPO/board/TARGET_CY8CKIT-062-BLE-release-v4.2.0"
 MS="D:/cy8ckit-prj/app/mtb_shared"
 HAL="$MS/mtb-hal-cat1/release-v2.7.4"
 CORE_LIB="$MS/core-lib/release-v1.8.0"

@@ -1,5 +1,5 @@
-﻿build/
+build/
 last_config/
 
-# BSP junction -> board_database (machine-specific)
+# BSP is vendored in ../../board/ - no junction needed
 bsps/

@@ -11,8 +11,9 @@ set -e
 cd "$(dirname "$0")"
 
 export CY_TOOLS_PATHS='C:/Users/user1/ModusToolbox/tools_3.8'
-export CY_GETLIBS_SHARED_PATH='D:/cy8ckit-prj/app'
-BSP="D:/cy8ckit-prj/app/capsense_test/bsps/TARGET_APP_CY8CKIT-062-BLE"
+REPO="$(cygpath -m "$(cd "$(dirname "$0")/../.." && pwd)")"
+export CY_GETLIBS_SHARED_PATH="$REPO/app"
+BSP="$REPO/board/TARGET_CY8CKIT-062-BLE-release-v4.2.0"
 CORE_MAKE="D:/cy8ckit-prj/app/mtb_shared/core-make/release-v3.9.0"
 RECIPE="D:/cy8ckit-prj/app/mtb_shared/recipe-make-cat1a/release-v2.8.0"
 

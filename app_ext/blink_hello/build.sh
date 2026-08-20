@@ -18,7 +18,8 @@ set -e
 CC="D:/arm-none-eabi-tc/bin/arm-none-eabi-gcc.exe"
 OBJCOPY="D:/arm-none-eabi-tc/bin/arm-none-eabi-objcopy.exe"
 
-PDL="D:/board_database/main-cy8ckit-062/mtb-pdl-cat1-release-v3.23.0"
+REPO="$(cygpath -m "$(cd "$(dirname "$0")/../.." && pwd)")"
+PDL="$REPO/app/mtb_shared/mtb-pdl-cat1/release-v3.23.0"
 DEVICES="$PDL/devices/COMPONENT_CAT1A"
 CAT1A_SRC="$DEVICES/source"
 
