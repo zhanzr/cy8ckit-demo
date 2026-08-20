@@ -49,5 +49,6 @@ C:/Infineon/Tools/ModusToolboxProgtools-1.9/openocd/bin/openocd.exe \
 ```
 UART: CYBSP_DEBUG_UART (P5_1 TX / P5_0 RX, 115200 8N1, COM26).
 
-See `.ref/mtb-example-emwin-eink-working/README.md` for the full reference
-example (emWin + FreeRTOS) build/flash notes.
+For the full reference example (emWin + FreeRTOS), see
+`app/eink-freertos-emwin/README.md` (the migrated official example).
+

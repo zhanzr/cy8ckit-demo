@@ -48,6 +48,31 @@ Key onboard resources used by the demos:
 | [`app/xip_test`](app/xip_test) | CM4 (MTB) | QSPI **XIP** test: program external NOR + read back via 0x18000000 | working |
 | [`app/cm4_external_app`](app/cm4_external_app) | CM0p + CM4 | CM4 app stored in the external NOR, read back + booted by the CM0p | partial (SMIF/XIP blocked) |
 
+## Apps in `app_ext/` (external-NOR XIP)
+
+The `app_ext/` projects run the **CM4 entirely from the external S25FL512S NOR
+via SMIF XIP** at `0x18000000`. A tiny CM0+ XIP stub (internal flash) inits the
+SMIF and releases the CM4 to the NOR vector table. The shared stub and UART
+source live in `app_ext/common/`.
+
+| App | What it does | Status |
+|-----|--------------|--------|
+| [`app_ext/blink_hello`](app_ext/blink_hello) | CM4 @ 150 MHz from XIP, blinks LEDs + prints internal DieTemp over SCB5 UART | working |
+| [`app_ext/coremark_150m`](app_ext/coremark_150m) | CoreMark 1.0 on the CM4 @ 150 MHz, running from XIP | working |
+| [`app_ext/dhry_150m`](app_ext/dhry_150m) | Dhrystone 2.1 on the CM4 @ 150 MHz, running from XIP | working |
+| [`app_ext/eink_test`](app_ext/eink_test) | E2271CS021 E-ink demo (cyhal SPI) from XIP, cycles 4 full-screen patterns | working |
+
+Key facts (shared across `app_ext`):
+
+- The CM4 is re-clocked to **150 MHz** (PLL on CLKPATH1); the SMIF interface
+  stays on CLKPATH0 (stub FLL) at **25 MHz** for extra XIP read margin. XIP
+  data reads are reliable at 150 MHz and marginal at 100 MHz on this board.
+- The UART uses peripheral divider **#1** so the cyhal SPI stack (which
+  allocates the first free divider) never reuses divider #0 and breaks the UART.
+- cyhal-based apps (`eink_test`) must call `__enable_irq()` - the cyhal SPI
+  transfers complete via SCB interrupts.
+
+
 ### blink_hello_m0p — the boot-issue demo
 
 CM0+-only, built to demonstrate the boot issue and the workaround:
@@ -113,6 +138,22 @@ make build TOOLCHAIN=GCC_ARM CONFIG=Debug -j4 MTB_SHARED_DIR=D:/cy8ckit-prj/app/
 ```
 
 
+### The `app_ext/` apps (external-NOR XIP)
+
+Same `./build.sh` flow (Git Bash / MSYS2, plain arm-gcc + PDL). Each produces
+`build/cm4_<app>.hex` (linked at `0x18000000`) plus the shared
+`build/cm0p_xip_stub.hex`:
+
+```
+cd app_ext/blink_hello        # or coremark_150m / dhry_150m / eink_test
+./build.sh
+```
+
+Program the CM4 image to the external NOR with the probe-rs SMIF algorithm
+(`tools/psoc6_smif_algo/`), then flash the stub to internal flash and boot.
+See each `app_ext/*/README.md` and "Flash / boot" below.
+
+
 ```
 cd app/blink_hello_m0p
 ./build.sh           # -> build/cm0p.hex
@@ -147,7 +188,35 @@ For the dualcore app, point `HEX` at `.../blink_hello_dualcore/build/combined.he
 C:\Infineon\Tools\ModusToolboxProgtools-1.9\openocd\bin\openocd.exe -c "adapter speed 1000" -c "source [find interface/kitprog3.cfg]" -c "source [find target/infineon/cy8c6xx.cfg]" -c "init" -c "source D:/cy8ckit-prj/tools/boot_only.tcl"
 ```
 
-Then open a serial terminal on the KitProg3 COM port at **115200 8N1**.
-The app keeps running after the OpenOCD session exits (verified: LEDs keep
-blinking).
+Then open a serial terminal on the KitProg3 COM port at **115200 8N1**. The
+app keeps running after the OpenOCD session exits (verified: LEDs keep blinking).
+
+### `app_ext/` (external-NOR XIP) apps
+
+1. Program the CM4 image to the external S25FL512S NOR (probe-rs + the SMIF
+   algorithm in `tools/psoc6_smif_algo/`):
+
+   ```
+   probe-rs download app_ext/blink_hello/build/cm4_blink_hello.elf \
+       --chip-description-path tools/psoc6_smif_algo/algo/target_cy8c6347_smif.yaml \
+       --chip CY8C6347BZI-BLD53-S25FL512S --protocol swd --allow-erase-all
+   ```
+
+2. Flash the CM0+ XIP stub to internal flash and boot (programs the stub, then
+   jumps the CM0+ to it; the stub inits the SMIF and releases the CM4 to
+   `0x18000000`):
+
+   ```
+   C:/Infineon/Tools/ModusToolboxProgtools-1.9/openocd/bin/openocd.exe \
+     -c "set HEX D:/cy8ckit-prj/app_ext/blink_hello/build/cm0p_xip_stub.hex" \
+     -c "adapter speed 1000" \
+     -c "source [find interface/kitprog3.cfg]" \
+     -c "source [find target/infineon/cy8c6xx.cfg]" \
+     -c "init" -c "source D:/cy8ckit-prj/tools/flash_and_boot.tcl"
+   ```
+
+After a power cycle / reset, re-boot with `tools/boot_only.tcl` (the NOR image
+and stub stay programmed).
+
+
 

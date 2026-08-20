@@ -8,14 +8,19 @@ from the vendored `app/mtb_shared`), the display-eink-e2271cs021 driver, and
 the shared app_ext CM0+ XIP stub (SMIF init + `Cy_SysEnableCM4(0x18000000)`).
 No FreeRTOS / emWin.
 
-## Status: EXPERIMENTAL
-- Builds cleanly (`./build.sh` → `build/cm4_eink_test.hex` at 0x18000000).
-- The panel display over external-NOR XIP is **not yet reliable**: the
-  probe-rs SMIF flash + the dual-core boot are flaky, and the cyhal-from-XIP
-  output has been observed to garble / stall. See `cm4/main.c` header TODO.
-- Uses the stub's 100 MHz clock (no re-clock) to keep the SMIF XIP interface
-  on the proven CLKPATH0 path. TODO: try re-clocking to 150 MHz (PLL on
-  CLKPATH1) once the display is confirmed at 100 MHz.
+## Status: WORKING (confirmed display + cycling loop)
+- Builds cleanly (`./build.sh` -> `build/cm4_eink_test.hex` at 0x18000000).
+- The panel **displays** and the main loop **cycles** all four patterns
+  (checkerboard / horizontal bars / vertical bars / box) over external-NOR XIP.
+- Two fixes made it reliable:
+  1. **Re-clock the CPU to 150 MHz** (PLL on CLKPATH1) while keeping CLKPATH0
+     (the stub FLL) as the SMIF interface clock source. XIP data reads are
+     reliable at 150 MHz (proven by `blink_hello`) and marginal at 100 MHz.
+  2. **`__enable_irq()`** - the cyhal SPI stack completes its transfers via
+     SCB interrupts, so global interrupts must be enabled.
+- The stub uses a 25 MHz SMIF interface clock (extra XIP read margin), and the
+  UART uses peripheral divider #1 so the cyhal SPI stack (which allocates the
+  first free divider) never steals divider #0 and breaks the UART.
 
 ## Build / flash / boot
 ```

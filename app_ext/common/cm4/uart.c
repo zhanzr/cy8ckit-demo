@@ -34,16 +34,18 @@ void uart_init(void)
                            | ((uint32_t)18u << HSIOM_PRT_PORT_SEL0_IO1_SEL_Pos);
 
     /* SCB5 clock = SystemCoreClock / divide, target 115200 baud @ 16x oversample
-     * (fractional 16.5-bit divider: divide = INT16 + 1 + FRAC/32) */
+     * (fractional 16.5-bit divider: divide = INT16 + 1 + FRAC/32).
+     * Use divider #1 (there are only 4, #0-#3): the cyhal SPI stack allocates
+     * the first free divider and would otherwise reuse #0 and break this UART. */
     {
         uint32_t scbClkHz = 115200u * 16u;
         uint32_t divx32 = (uint32_t)(((uint64_t)SystemCoreClock * 32u) / scbClkHz);
         uint32_t int16 = divx32 / 32u;
         uint32_t frac5 = divx32 % 32u;
 
-        Cy_SysClk_PeriphAssignDivider(PCLK_SCB5_CLOCK, CY_SYSCLK_DIV_16_5_BIT, 0u);
-        Cy_SysClk_PeriphSetFracDivider(CY_SYSCLK_DIV_16_5_BIT, 0u, (int16 - 1u), frac5);
-        Cy_SysClk_PeriphEnableDivider(CY_SYSCLK_DIV_16_5_BIT, 0u);
+        Cy_SysClk_PeriphAssignDivider(PCLK_SCB5_CLOCK, CY_SYSCLK_DIV_16_5_BIT, 1u);
+        Cy_SysClk_PeriphSetFracDivider(CY_SYSCLK_DIV_16_5_BIT, 1u, (int16 - 1u), frac5);
+        Cy_SysClk_PeriphEnableDivider(CY_SYSCLK_DIV_16_5_BIT, 1u);
     }
 
     static const cy_stc_scb_uart_config_t uart_cfg = {

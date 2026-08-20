@@ -2,13 +2,12 @@
  * eink_test (app_ext) - E2271CS021 E-ink demo running from the external NOR
  * via SMIF XIP (0x18000000).
  *
- * The CM0+ XIP stub configured the SMIF XIP (50 MHz interface clock) and
- * released this core at 100 MHz (FLL on CLKPATH0). This app drives the panel
- * with the SAME cyhal SPI stack as the working app/eink_test (the level
- * translator timing depends on it). It deliberately does NOT re-clock to
- * 150 MHz yet, so the SMIF XIP interface stays on the proven CLKPATH0 path.
- * TODO(eink_test/app_ext): try re-clocking to 150 MHz (PLL on CLKPATH1,
- * keeping CLKPATH0 for the SMIF) after the display is confirmed at 100 MHz.
+ * The CM0+ XIP stub configured the SMIF XIP (25 MHz interface clock - extra
+ * margin) and released this core. This app raises the CPU to 150 MHz (PLL on
+ * CLKPATH1) while keeping CLKPATH0 (the stub FLL) as the SMIF interface clock
+ * source; XIP data reads are reliable at 150 MHz (proven by blink_hello) and
+ * marginal at 100 MHz on this board. The EPD is driven with the SAME cyhal
+ * SPI stack as the working app/eink_test.
  *
  * No FreeRTOS / emWin: a main loop cycles four reduced patterns (checkerboard
  * / horizontal bars / vertical bars / box) and blinks LED0 (P11.1).
@@ -23,6 +22,7 @@
 #include "cyhal.h"
 #include "cy_syslib.h"
 #include "cy_wdt.h"
+#include "cy_sysclk.h"
 #include "system_psoc6.h"
 #include "mtb_e2271cs021.h"
 #include <stdio.h>
@@ -30,6 +30,27 @@
 #include <stdbool.h>
 
 extern void uart_init(void);
+
+/* Raise the CPU to 150 MHz (PLL on CLKPATH1) while keeping CLKPATH0 (the
+ * FLL, from the CM0+ stub) as the SMIF interface clock source. XIP data
+ * reads are reliable at 150 MHz (blink_hello proves it) and marginal at
+ * 100 MHz on this board. */
+static void clock_init_150mhz_pll(void)
+{
+    Cy_SysClk_ClkPathSetSource(1u, CY_SYSCLK_CLKPATH_IN_IMO);
+    {
+        static const cy_stc_pll_config_t pllCfg = {
+            .inputFreq  = 8000000u,
+            .outputFreq = 150000000u,
+            .outputMode = CY_SYSCLK_FLLPLL_OUTPUT_OUTPUT,
+        };
+        (void)Cy_SysClk_PllConfigure(1u, &pllCfg);
+    }
+    (void)Cy_SysClk_PllEnable(1u, 100000u);
+    Cy_SysLib_SetWaitStates(false, 150UL);
+    Cy_SysClk_ClkHfSetSource(0u, CY_SYSCLK_CLKHF_IN_CLKPATH1);
+    SystemCoreClockUpdate();
+}
 
 #define EPD_WIDTH       MTB_E2271CS021_DISPLAY_SIZE_X
 #define EPD_HEIGHT      MTB_E2271CS021_DISPLAY_SIZE_Y
@@ -145,12 +166,16 @@ int main(void)
 {
     Cy_WDT_Unlock();
     Cy_WDT_Disable();
+    __enable_irq();  /* cyhal SPI transfers complete via SCB ISRs */
 
-    /* Keep the clock as the CM0+ XIP stub set it (FLL @ 100 MHz, SMIF XIP on
-     * CLKPATH0). No re-clock yet - see the file header TODO. */
+    /* CPU to 150 MHz (PLL, CLKPATH1). SMIF XIP stays on CLKPATH0 (stub FLL)
+     * where the interface clock is reliable. uart_init() derives the SCB5
+     * baud divider from SystemCoreClock, so it must see 150 MHz first. */
+    clock_init_150mhz_pll();
     uart_init();
 
-    printf("\r\n=== eink_test [app_ext] CM4 @ 100 MHz (XIP) ===\r\n");
+    printf("\r\n=== eink_test [app_ext] CM4 @ %lu Hz (XIP) ===\r\n",
+           (unsigned long)SystemCoreClock);
 
     cyhal_spi_t spi;
     cy_rslt_t rslt = cyhal_spi_init(&spi, eink_pins.spi_mosi, eink_pins.spi_miso,

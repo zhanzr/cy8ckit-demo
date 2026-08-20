@@ -88,10 +88,12 @@ static void smif_xip_init(void)
     *(volatile uint32_t *)GPIO_P11_CFG = 0xEEEEE600u;
     *(volatile uint32_t *)GPIO_P11_OUT = 0x000000FCu;
 
-    /* SMIF interface clock: CLK_HF[2] = CLKPATH0 / 2 = 50 MHz @ FLL 100. */
-    *(volatile uint32_t *)SRSS_CLK_ROOT_SEL2 = 0x80000010u;
+    /* SMIF interface clock: CLK_HF[2] = CLKPATH0 / 4 = 25 MHz @ FLL 100
+     * (extra margin for XIP reads). */
+    *(volatile uint32_t *)SRSS_CLK_ROOT_SEL2 = 0x80000030u;
 
-    /* SMIF device 0 + XIP command config. */
+    /* SMIF device 0 + XIP command config. Values captured from the working
+     * cy_serial_flash_qspi app (quad read 0xEC, 4-byte address, WR 0x34). */
     *(volatile uint32_t *)SMIF0_DEV0_CTL     = 0x80000001u;  /* WR_EN + ENABLED */
     *(volatile uint32_t *)SMIF0_DEV0_ADDR    = 0x18000000u;
     *(volatile uint32_t *)SMIF0_DEV0_MASK    = 0xFC000000u;
