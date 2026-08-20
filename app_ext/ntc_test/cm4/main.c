@@ -6,9 +6,9 @@
  * Port of app/ntc_test to the app_ext XIP flow: the CM0+ stub inits the SMIF
  * and releases this core, this app re-clocks the CPU to 150 MHz (PLL on
  * CLKPATH1, SMIF stays on CLKPATH0), applies the generated device config
- * (clocks/routing/peripherals/pins - not init_cycfg_system), then samples the
- * NTC (A0..A3) and the internal DieTemp sensor and reports the raw SAR counts
- * plus best-effort temperatures over the shared SCB5 UART.
+ * (clocks/routing/peripherals/pins - not init_cycfg_system), drives the NTC
+ * divider (A0 high / A3 low) and reports A1/A2 + the internal DieTemp over the
+ * shared SCB5 UART.
  */
 
 #include "cyhal.h"
@@ -55,14 +55,9 @@ int main(void)
     /* CPU to 150 MHz (PLL, CLKPATH1). SMIF XIP stays on CLKPATH0 (stub FLL). */
     clock_init_150mhz_pll();
 
-    /* Device config: peripheral dividers, routing, peripherals and pins.
-     * init_cycfg_system is deliberately NOT called - the CM0+ stub already
-     * set the clocks/SMIF. */
-    init_cycfg_clocks();
-    init_cycfg_routing();
-    init_cycfg_peripherals();
-    init_cycfg_pins();
-
+    /* No init_cycfg_* calls (like blink_hello): the generated device config
+     * would reconfigure the PASS/analog routing and break the DieTemp read.
+     * The SAR clock + UART are set up manually in ntc_init()/uart_init(). */
     uart_init();  /* SCB5 P5_1/P5_0 @ 115200 (replaces cy_retarget_io) */
     Cy_SysLib_DelayUs(2000u);  /* let the SCB5 TX settle */
 
@@ -75,18 +70,17 @@ int main(void)
 
     for (;;)
     {
-        uint16_t a0, a1, a2, a3, dts;
-        ntc_read_raw(&a0, &a1, &a2, &a3, &dts);
-        uint16_t m0, m1, m2, m3;
-        ntc_read_mv(&m0, &m1, &m2, &m3);
-        float t_ntc = ntc_temp_from_raw(a0, a1, a2, a3);
+        uint16_t a1, a2, dts;
+        ntc_read_raw(&a1, &a2, &dts);
+        uint16_t m1, m2;
+        ntc_read_mv(&m1, &m2);
+        float t_ntc = ntc_temp_from_a1a2_mv(m1, m2);
         int16_t t_dts = dts_read_celsius();
 
-        printf("A0=%u A1=%u A2=%u A3=%u DTS=%u\r\n",
-               (unsigned)a0, (unsigned)a1, (unsigned)a2, (unsigned)a3, (unsigned)dts);
-        printf("mV: %u %u %u %u   NTC: %6.2f C   DTS: %4d C\r\n",
-               (unsigned)m0, (unsigned)m1, (unsigned)m2, (unsigned)m3,
-               (double)t_ntc, (int)t_dts);
+        printf("A1=%u A2=%u DTS=%u\r\n",
+               (unsigned)a1, (unsigned)a2, (unsigned)dts);
+        printf("mV: %u %u   NTC: %6.2f C   DTS: %4d C\r\n",
+               (unsigned)m1, (unsigned)m2, (double)t_ntc, (int)t_dts);
 
         Cy_SysLib_DelayUs(SAMPLE_DELAY_MS * 1000u);
     }
